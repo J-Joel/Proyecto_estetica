@@ -21,19 +21,20 @@ Recomiendo que lo llamen "venv" y que la carpeta se ubique junto al archivo mana
 Para descargar el entorno de github, se debe de instalar git accediendo mediante la url https://git-scm.com/downloads.
 
 <div align="center">
-<img src="./static/screenshots/Instalacion_git_1.JPG">
+<img src="https://drive.google.com/uc?export=view&id=17vHEArCwzi_WbvppLp-E83If7o0rpxVD">
 </div>
 
 En la imagen podemos acceder a la descargar mediante las 2 opciones subrayadas.
 
 <div align="center">
-<img src="./static/screenshots/Instalacion_git_2.JPG">
+<img src="https://drive.google.com/uc?export=view&id=1lmJIZYRLPtar0wzNRevGb3NC_cj1kDPL">
 </div>
+
 
 Dependiendo nuestro microprocedaor(Creo que ya todos tienen tecnologia de 64bits) seleccionamos la opcion que se adapte a nuestro sistema, dando asi el inicio de la descarga. Durante la instalacion del git, le dan a next, dejandolo por defecto a cada una de las opcion. Una vez terminado la instalacion, para empezar a usar git, se debe de acceder a su terminal bash, mediante el click derecho del mouse, en el le aparecera nuevas opciones relacionados a este.
 
 <div align="center">
-<img src="./static/screenshots/Abrir_git.JPG">
+<img src="https://drive.google.com/uc?export=view&id=1HsRebcF0ectTEAlwuqDyoLt2w-6R0w0W">
 </div>
 
 **Ahora en visual studio es posible utilizar la terminal Bash**
@@ -103,3 +104,13 @@ Usa git push para insertar confirmaciones realizadas en la rama local en un repo
 ```bash
   $ git push origin main
 ```
+
+### Actualizar la carpeta local del repositorio
+
+Para mantener el proyecto actualizado con los cambios realizados por otros integrantes del repositorio, es necesario de usar el comando pull, esto permite estar al tanto de las modificaciones que se realizan.
+
+```bash
+  $ git pull
+```
+
+Una caracteristica especial de github, es la de modificar los archivos indicando que parte se modifico, dejando ambas versiones comentadas en caso de un conflicto de cambios.
