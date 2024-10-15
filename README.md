@@ -92,10 +92,12 @@ Este comando puede ir añadiendo archivos por archivos, o completamente todo el 
 Para comfirar los cambios de los archivos añadidos por add, se debe usar el comando
 
 ```bash
-  $ git commit -m "Descripcion general de lo que se cambio"
+  $ git commit -m "Titulo o resumen del cambio" -m "Descripcion/mensaje/notas de lo cambiado(No es necesario el segundo -m)"
 ```
 
-Con el parametro **-m** indicamos el mensaje que se mostrara al realizar el cambio dentro del repositorio, este se visualizara para todos los integrantes dentro del repositorio(Es necesario tener configurado el usuario)
+Con el primer parametro **-m** indicamos el mensaje que se mostrara al realizar el cambio dentro del repositorio, este se visualizara para todos los integrantes dentro del repositorio(Es necesario tener configurado el usuario).
+
+Al utilizar el **-m** por segunda vez, podemos crear una descripcion mas amplia de los cambios que realizamos, o alguna notacion para recordar.
 
 ### Subir los cambios al repositorio
 
@@ -104,6 +106,9 @@ Usa git push para insertar confirmaciones realizadas en la rama local en un repo
 ```bash
   $ git push origin main
 ```
+El **origin**, hace referencia al repositorio actual, al que se ubica la terminal bash. Se puede utilizar la url del repositorio al que queramos subir los cambios.
+
+El **main**, es a la rama que vayamos a realizar los cambios, los repositorios tienen la funcion de crear y dividir el proyecto en varios sectores. No es necesario hacerlo, con trabajar con el main y no equivocarse mucho, es suficiente.
 
 ### Actualizar la carpeta local del repositorio
 
