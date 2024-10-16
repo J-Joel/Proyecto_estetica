@@ -10,4 +10,4 @@ class InicioView(TemplateView):
 class LoginView(TemplateView):
     def get(self, request):
         # Lógica para la vista de login
-        return render(request, 'login.html')
+        return render(request, 'usuarios/login.html')

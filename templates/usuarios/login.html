@@ -14,7 +14,9 @@
 	<div class="login-wrap">
 		<div class="login-html">
 			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Ingresar</label>
-			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
+			<!--<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>--><!--Boton antiguo-->
+			<input id="tab-2" type="radio" name="tab" class="sign-up" {% if request.GET.tab == 'registro' %}checked{% endif %}>
+            <label for="tab-2" class="tab">Registrarse</label><!--Boton que llamma registrarse por primera vez-->
 			<div class="login-form">
 				<div class="sign-in-htm">
 					<!--Cuadro de Ingresar ya estando reguistrado -->
