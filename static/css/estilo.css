@@ -152,13 +152,13 @@ sup {
 }
 
 a {
-  color: #F195B2;
+  color: #F195B2; /*color del Domain*/
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #e85181;
+  color: #e85181;/*#e85181;*/
   text-decoration: underline;
 }
 
