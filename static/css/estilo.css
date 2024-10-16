@@ -10222,6 +10222,57 @@ h6,
 
 
 /**FInCArusel Helado Carla****/
+/**Testimonial Talia**/
+.team:hover .team-social {
+  top: 0;
+}
+
+.testimonial-carousel .owl-dots {
+  margin-top: 20px;
+}
+
+.testimonial-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 25px;
+  height: 25px;
+  background: light;
+  border: 1px solid primary;
+  transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+  width: 50px;
+  background: primary;
+}
+
+.footer p,
+.footer a,
+.footer i {
+  color: #CCCCCC !important;
+}
+
+.footer .btn-primary i {
+  color: #FFFFFF !important;
+}
+
+@media (min-width: 992px) {
+  .footer::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: rgba(256, 256, 256, .15);
+  }
+}
+
+.contact-form .help-block ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
 
 
