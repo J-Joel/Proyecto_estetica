@@ -8,3 +8,4 @@ from django.views.generic import TemplateView, ListView # Clases
 #    return render(request,'inicio/index.html')
 class Inicio(TemplateView): # Clases
     template_name = 'inicio/index.html'
+    

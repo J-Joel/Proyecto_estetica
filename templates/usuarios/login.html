@@ -24,10 +24,16 @@
                             <label for="userlog" class="label">Usuario</label>
 							<input type="text" id="userlog" name="txtuserlog" value="{{ usuario.usuario }}" class="form-control input" placeholder="Ingrese su usuario" maxlength="50" required>
                         </div>
-                        <div class="group mb-2">
+						<!--Cantraseña se tape el texto con asteriscos-->
+						<div class="group mb-2">
+							<label for="passlog" class="label">Contraseña</label>
+							<input type="password" id="passlog" name="txtpasslog" value="{{ usuario.contraseña }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
+						</div>
+						
+                        <!--<div class="group mb-2">
 							<label for="passlog" class="label">Contraseña</label>
                             <input type="text" id="passlog" name="txtpasslog" value="{{ usuario.contraseña }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
-                        </div>
+                        </div>-->
 						<div class="group mb-2"> <!-- Esto tiene que ver algo sobre el cache del navegador -->
 							<input id="check" type="checkbox" class="check" checked>
 							<label for="check"><span class="icon"></span> Mantener la sesion abierta</label>
@@ -50,7 +56,17 @@
                 	    <div class="group mb-2">
                 	        <label for="userreg" class="label">Usuario</label>
 							<input type="text" id="userlog" name="txtuserreg" value="{{ usuario.usuario }}" class="form-control input" placeholder="Ingrese su usuario" maxlength="50" required>
-                	    </div>
+							<!--Tapa la contraseña con asteriscos-->
+							<div class="group mb-2">
+								<label for="passreg" class="label">Contraseña</label>
+								<input type="password" id="passreg" name="txtpassreg" value="{{ usuario.contraseña }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
+							</div>
+							<div class="group mb-2">
+								<label for="passrereg" class="label">Repetir contraseña</label>
+								<input type="password" id="passrereg" name="txtpassrereg" value="{{ usuario.contraseña }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
+							</div>
+							
+							<!--</div>
                 	    <div class="group mb-2">
 							<label for="passreg" class="label">Contraseña</label>
                 	        <input type="text" id="passreg" name="txtpassreg" value="{{ usuario.contraseña }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
@@ -58,7 +74,7 @@
 						<div class="group mb-2">
 							<label for="passrereg" class="label">Repetir contraseña</label>
                 	        <input type="text" id="passrereg" name="txtpassrereg" value="{{ usuario.contraseña }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
-                	    </div>
+                	    </div>-->
 						<div class="group mb-2">
 							<label for="emailreg" class="label">Correo electronico</label>
                 	        <input type="text" id="emailreg" name="txtemailreg" value="{{ usuario.email }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
