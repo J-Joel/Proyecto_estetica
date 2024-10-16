@@ -9,3 +9,6 @@ from django.views.generic import TemplateView, ListView # Clases
 class Inicio(TemplateView): # Clases
     template_name = 'inicio/index.html'
     
+class Contacto(TemplateView): # Clases
+    template_name = 'inicio/contacto.html'
+    
