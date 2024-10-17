@@ -2,40 +2,102 @@
 {% load static %}
 
 {% block style %}
-	<link rel="stylesheet" href="{% static 'css/style-login.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style-login.css' %}"> <!--DENTRO ESTÁ TAMBIÉN EL CÓDIGO CSS DE LA GALERÍA-->
 {% endblock %}
 
 {% block title%}
-    Login
+    Galería
 {% endblock %}
 
 {% block body %}
+    
     <div class="contenedor-galeria">
         <div class="galeria">
             <div class="contenedor-imagen">
                 <figure>
-                    <img src="C:\Mis Proyectos\Proyecto_estetica\static\img\una3.jpg">
+                    <img src="{% static 'img/una3.jpg' %}">
                 </figure>
             </div>
 
             <div class="contenedor-imagen">
                 <figure>
-                    <img src="C:\Mis Proyectos\Proyecto_estetica\static\img\una2.jpg" >
+                    <img src="{% static 'img/una2.jpg' %}" >
                 </figure>
             </div>
 
             <div class="contenedor-imagen">
                 <figure>
-                    <img src="C:\Mis Proyectos\Proyecto_estetica\static\img\una1.jpg" >
+                    <img src="{% static 'img/estudio4.jpg' %}" >
                 </figure>
             </div>
 
             <div class="contenedor-imagen">
                 <figure>
-                    <img src="C:\Mis Proyectos\Proyecto_estetica\static\img\una6.jpg" >
+                    <img src="{% static 'img/una4.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una5.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una6.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una10.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una16.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una12.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una9.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/estudio2.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una1.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una12.jpg' %}" >
+                </figure>
+            </div>
+
+            <div class="contenedor-imagen">
+                <figure>
+                    <img src="{% static 'img/una13.jpg' %}" >
                 </figure>
             </div>
 
         </div>
     </div>
+
 {% endblock %}
