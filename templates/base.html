@@ -37,7 +37,6 @@
                 <a class="text-white pr-3" href="{% url 'login' %}">Ingresar</a>
                 <span class="text-white">|</span>
                 <a class="text-white px-3" href="{% url 'login' %}?tab=registro">Registrarse</a>
-                <span class="text-white">|</span>
             </div>
             <div class="col-md-4 text-center text-lg-left mb-2 mb-lg-0" style="margin-top: 10px;">
                 <div class="d-inline-flex align-items-center">
@@ -102,7 +101,7 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="{% url 'inicio' %}" class="navbar-brand">
                         <h1 class="mb-3 text-white"><span class="text-primary">Juliett </span> Studio</h1>
                     </a>
                     <p>¡Estamos aquí para ayudarte! Si tienes preguntas sobre nuestros servicios, necesitas más información o deseas agendar una cita, no dudes en contactarnos. Estamos aquí para ayudarte a realzar tu belleza y bienestar.</p>
