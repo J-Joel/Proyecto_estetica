@@ -12,3 +12,6 @@ class Inicio(TemplateView): # Clases
 class Contacto(TemplateView): # Clases
     template_name = 'inicio/contacto.html'
     
+class Galeria(TemplateView): # Clases
+    template_name = 'inicio/galeria.html'
+    
