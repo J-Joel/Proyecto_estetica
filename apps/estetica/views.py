@@ -1,5 +1,4 @@
 from django.shortcuts import render # Funciones
-
 from django.views.generic import TemplateView, ListView # Clases
 
 # Create your views here.
@@ -9,9 +8,9 @@ from django.views.generic import TemplateView, ListView # Clases
 class Inicio(TemplateView): # Clases
     template_name = 'inicio/index.html'
     
-class Contacto(TemplateView): # Clases
+class Contacto(TemplateView):
     template_name = 'inicio/contacto.html'
     
-class Galeria(TemplateView): # Clases
+class Galeria(TemplateView):
     template_name = 'inicio/galeria.html'
     
