@@ -12,7 +12,7 @@ class LoginView(TemplateView):
         # Lógica para la vista de login
         return render(request, 'usuarios/login.html')
 
-class GaleriaView(TemplateView):
-    def get(self, request):
+#class GaleriaView(TemplateView):
+#    def get(self, request):
         # Lógica para la vista de inicio
-        return render(request, 'inicio/galeria.html')
+ #       return render(request, 'inicio/galeria.html')
