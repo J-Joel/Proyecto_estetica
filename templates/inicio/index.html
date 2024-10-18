@@ -48,7 +48,7 @@
             </a>
         </div>
     </div>
-    <!-- Carousel End -->
+    
     <!-- About Start-->
     <section  id="Nos">
     <div class="container-fluid py-5">
@@ -60,7 +60,7 @@
                 <div class="col-lg-6">
                     <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Sobre Nosotros</h6>
                     <h1 class="mb-4"> Juliett Studio  Tu mejor elección</h1>
-                    <p class="pl-4 border-left border-primary"> Somo una estetica completa que ofrece servicios de calidad con los mejores profesionales para que estes siempre hermosa pensamos en cada detalle pensamos en vos!</p>
+                    <p class="pl-4 border-left border-primary"> Somos una estetica completa que ofrece servicios de calidad con los mejores profesionales para que estes siempre hermosa pensamos en cada detalle pensamos en vos!</p>
                     <div class="row pt-3">
                         <div class="col-6">
                             <div class="bg-light text-center p-4">
@@ -80,8 +80,59 @@
         </div>
     </div>
     <!-- About End -->
+    
+    <!-- Prueva de Caruccel -->
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Servicios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        .product-item {
+            text-align: center;
+            padding: 20px; /* Reducir el espacio interno */
+        }
+        .product-item .img-container {
+            max-height: 1000px;
+            overflow: hidden;
+            margin-bottom: 50px; /* Reducir el margen inferior */
+        }
+        .product-item img {
+            width: 1000%;
+            height: auto;
+        }
+        .owl-nav button {
+            background-color: pink; /* Color de fondo rosa */
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .owl-nav button.owl-prev {
+            left: 20px; /* Posición de la flecha izquierda */
+        }
+        .owl-nav button.owl-next {
+            right: 20px; /* Posición de la flecha derecha */
+        }
+        .owl-nav button span {
+            font-size: 1.5em;
+            color: white; /* Color de la flecha */
+        }
+    </style>
+</head>
+<body>
 
-    <!-- Products Start -->
+    <!-- Carrusel de Productos -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row">
@@ -135,17 +186,40 @@
                             <a href="#" class="btn btn-reservar">Reservar turno</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
                 </div>
+            </div>
+        </div>
     </div>
-    <!-- Products End -->
-    <!-- Service Start Reserva de Turnos-->
-    <!-- <div class="container-fluid px-0 py-5 my-5">
-        <div class="row mx-0 justify-content-center text-center">
-            <div class="col-lg-6">
-                <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Turnos</h6>
-                <h1>"Porque mereces lo mejor, asegúrate de tu turno hoy mismo"</h1>
-            </div>-->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.product-carousel').owlCarousel({
+                loop: true,
+                margin: 8, /* Reducir el margen entre elementos */
+                nav: true, // Habilita las flechas de navegación
+                navText: ['<span>&#9664;</span>', '<span>&#9654;</span>'], // Personaliza las flechas
+                autoplay: true, // Desliza automáticamente
+                autoplayHoverPause: true, // Pausa al pasar el ratón por encima
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    900: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
         </div>
         <div class="row justify-content-center bg-appointment mx-0">
             <div class="col-lg-6 py-5">
@@ -183,7 +257,7 @@
                         <div class="form-row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <select class="custom-select bg-transparent px-4" style="height: 47px;"><!--DESPLEGABLE-->
+                                    <select class="custom-select bg-transparent px-4" style="height: 47px;">
                                         <option selected>Seleccione un Servicio</option>
                                         <option value="1">Semipermanente</option>
                                         <option value="2">Kapping</option>
@@ -202,7 +276,7 @@
                     </form>
                 </div>
             </div>
-    <!-- Service End -->
+    <!--Service End -->
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
@@ -214,7 +288,7 @@
                 <div class="col-lg-6">
                     <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Comentarios</h6>
                     <h1 class="mb-4">¡Qué dicen nuestras clientas!</h1>
-                    <div class="owl-carousel testimonial-carousel">
+                    <!--<div class="owl-carousel testimonial-carousel">-->
                         <div class="position-relative">
                             <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
                             <div class="d-flex align-items-center mb-3">
@@ -235,19 +309,19 @@
                                     <span>Profession: Contadora</span>
                                 </div>
                             </div>
-                            <!--<p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
+                            <p class="m-0">"Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor".</p>
                         </div>
                         <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
+                            <!--<i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
                             <div class="d-flex align-items-center mb-3">
                                 <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
+                                 <div class="ml-3">
                                     <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>-->
+                                    <span>Profession</span>
                                 </div>
                             </div>
                             <p class="m-0">¡Estoy encantada con mis uñas! El servicio fue excelente, la atención y el trato muy amables. ¡Lo recomiendo totalmente!</p>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
