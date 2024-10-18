@@ -34,11 +34,12 @@ body {
 	gap: 5px;
 	max-width: 800px;
 	width: 100%;
+	justify-content: center;
   }
   
   .contenedor-imagen{
 	
-	position: relative;
+	position:relative;
 	left: 0;
 	width: 150px;
 	border-radius: 10px;
@@ -63,5 +64,15 @@ body {
 	border-radius: 8px;
 	width: 25%;
   }
+
+  .descripcion{
+	font-family: Georgia, 'Times New Roman', Times, serif;  
+	color: #F195B2;
+  }
     
+  .subtitulo{
+	font-family: Georgia, 'Times New Roman', Times, serif; 
+	color: #D3D3D3;;
+  }
+
   /*FIN GALERIA CSS*/

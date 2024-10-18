@@ -147,7 +147,7 @@ a{color:inherit;text-decoration:none}
 	color:#fff;
 }
 .login-form .group .check:checked + label .icon{
-	background:#ee22aa; /*check mantener la sesión abierta*/
+	background:#e155b2c6; /*check mantener la sesión abierta*/
 }
 /*#ee22aa;*/
 .login-form .group .check:checked + label .icon:before{
