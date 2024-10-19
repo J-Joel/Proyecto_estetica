@@ -1,0 +1,129 @@
+.div-body{ /* Contenedor de todo */
+    width: 100%;
+    height: 100%;
+    position:static;
+    background-image: linear-gradient(to right,
+    #ffd2ec, 
+    #ffcaec, 
+    #ffc1ed, 
+    #ffb9ee, 
+    #ffb1f0, 
+    #ffb1f0, 
+    #ffb1f0, 
+    #ffb1f0, 
+    #ffb9ee, 
+    #ffc1ed, 
+    #ffcaec, 
+    #ffd2ec
+    );
+}
+.panel-central{ /* Panel */
+    background: rgba(86, 86, 86, 0.173);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    transition: all 300ms;
+}
+.carrusel-body{ /* Contenedor del contenedor del contenedor de las imagenes, fondo de las imagenes */
+    width: 100%; /*ancho del contenedor*/
+    height: 380px; /*alto del contenedor*/
+    overflow: hidden;
+}
+.content-all{ /* Contenedor del contenedor de las imagenes */
+    width: 210px; 
+    margin: auto;
+    perspective: 700px;
+    
+}
+.content-carrousel{ /* Contenedor de todas las imagenes */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    cursor: grab;
+    user-select: none;
+}
+.carrusel-item{ /* Contenedor de cada imagen*/
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 124px;
+    background-size: cover;
+    box-shadow: 0px 0px 20px 0px black;
+    border: 2px solid #000;
+    transition: all 300ms;
+}
+.carrusel-item:hover{ /* Cuando el cursor pasa sobre el contenedor, cambia su diseño */
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+.carrusel-item figure{ /* Todos los elementos figure que pertenescan a la clase */
+    z-index: -2;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+}
+.carrusel-item img{ /* Imagen */
+    width: 100%;
+    transition: all 300ms;
+}
+.carrusel-item img:hover{ /* Cuando el cursor pasa sobre la imagen, cambia su diseño */
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+.carrusel-item div{ /* Contenedor del texto y boton */
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 50%;
+    position: relative;
+    overflow: hidden;
+}
+/* Cada elemento que pertenesca al elemento figure dentro de la clase, carga su propias caracteristicas */
+.carrusel-item:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.carrusel-item:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.carrusel-item:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.carrusel-item:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.carrusel-item:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.carrusel-item:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.carrusel-item:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.carrusel-item:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.carrusel-item:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.carrusel-item:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.con-turno{
+    background: rgba(86, 86, 86, 0.173);
+}
+
+@media screen and (max-width:900px){
+    .panel-central{
+        width: 90%;
+        transition: all 300ms;
+    };
+    .carrusel-body{
+        position: fixed;
+        width: 800px;
+    };
+    .content-carrousel {
+        position: fixed;
+        font-size: 10px;
+    };
+}
+@media screen and (max-width:600px){
+    .panel-central{
+        width: 100%;
+        transition: all 300ms;
+    };
+    .carrusel-body{
+        width: 600px;
+    };
+    .content-carrousel {
+        position: fixed;
+        font-size: 7px;
+    };
+}
