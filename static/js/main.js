@@ -264,10 +264,6 @@ $(document).ready(function(){
         }
     });
 });
-
-
-
-
 //Fin HeladoCarla
 
 // Testimonials carousel
@@ -279,8 +275,6 @@ $(".testimonial-carousel").owlCarousel({
     loop: true,
     items: 1
 });
-
-
 
 
 

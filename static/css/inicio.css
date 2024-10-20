@@ -3,16 +3,18 @@
     padding: 20px; /* Reducir el espacio interno */
 }
 .product-item .img-container {
-    max-height: 1000px;
+    max-height: 200px;
     overflow: hidden;
-    margin-bottom: 50px; /* Reducir el margen inferior */
+    margin-bottom: 20px; /* Reducir el margen inferior */
 }
 .product-item img {
     width: 1000%;
     height: auto;
+    object-fit: cover;/*Para asegurar que la imgen se aguste al contenido*/
 }
 .owl-nav button {
-    background-color: pink; /* Color de fondo rosa */
+    
+    background-color: rgb(248, 131, 151)247, 175, 187; /* Color de fondo rosa */
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -23,12 +25,42 @@
     cursor: pointer;
 }
 .owl-nav button.owl-prev {
-    left: 20px; /* Posición de la flecha izquierda */
+    left: 50px; /* Posición de la flecha izquierda */
 }
 .owl-nav button.owl-next {
-    right: 20px; /* Posición de la flecha derecha */
+    right: 50px; /* Posición de la flecha derecha */
 }
 .owl-nav button span {
     font-size: 1.5em;
-    color: white; /* Color de la flecha */
+    color: rgb(243, 118, 151); /* Color de la flecha */
 }
+/* Bot */
+.btn-whatsapp {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f67bc7;
+    color: rgb(207, 129, 173);
+    padding: 7px;
+    border-radius: 50%; 
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.whatsapp-icon {
+    width: 40px; /* Ajusta el tamaño del ícono si quero modificar Talia */
+    height: 40px;
+}
+
+
+
+.carousel-item h6 {
+    color: inherit;  
+}
+
+.carousel-item p {
+    color: inherit; 
+};
+
+

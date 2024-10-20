@@ -2,7 +2,7 @@
 /*GALERIA CSS*/
 
 body {
-	background-color: white ;
+	background-color: rgb(233, 114, 164) ;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -16,6 +16,8 @@ body {
 	padding: 0;
 	box-sizing: border-box;
   }
+  
+  
   
   .contenedor-galeria{
 	justify-content: center;
@@ -45,7 +47,7 @@ body {
 	border-radius: 10px;
 	height: 400px; /*alto del contenedor*/
 	overflow: hidden;
-	background-color: whitesmoke;
+	background-color: rgb(247, 147, 228)45, 245;
 	transition: 0.4s ease-in-out;
 	box-shadow: 0 5px 12px rgba(0,0,0,0.5);
 	flex: 0.25;
@@ -72,7 +74,7 @@ body {
     
   .subtitulo{
 	font-family: Georgia, 'Times New Roman', Times, serif; 
-	color: #D3D3D3;;
+	color: #e393cf;;
   }
 
   /*FIN GALERIA CSS*/

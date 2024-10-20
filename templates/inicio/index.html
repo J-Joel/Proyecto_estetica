@@ -24,7 +24,7 @@
                 <div class="carousel-item active">
                     <img class="w-100" src="{% static 'img/estudio6.jpg'%}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 800px;">
+                        <div class="p-3" style="max-width: 400px;">
                             <h4 class="text-white text-uppercase mb-md-3">Centro de estética</h4>
                             <h1 class="display-3 text-white mb-md-4">Juliett Studio</h1>
                             <a href="contacto" class="btn btn-primary py-md-3 px-md-5 mt-2">Nuestra Ubicación</a>
@@ -34,10 +34,10 @@
                 <div class="carousel-item">
                     <img class="w-100" src="{% static 'img/estudio2.jpg'%}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-" style="max-width: 800px;">
+                        <div class="p-" style="max-width: 400px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tratamientos y servicios</h4>
                             <h1 class="display-3 text-white mb-md-4">Más de 5 años ofreciendo nuestros servicios</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Aprende más</a>
+                            <a href="servicios" class="btn btn-primary py-md-3 px-md-5 mt-2">Aprende más</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
     <!-- About Start-->
     <section  id="Nos">
     <div class="container-fluid py-5">
-        <div class="container py-5">
+        <!--<div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 pb-5 pb-lg-0">
                     <img class="img-fluid w-100" src="{% static 'img/fondo_estetica.jpg'%}" alt="Imagen">
@@ -84,7 +84,72 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
+    <!--Prueva contador-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function() {
+    let animated = false; // Variable para evitar animaciones múltiples
+
+    function animateCounter(element, endValue) {
+        $(element).prop('Counter', 0).animate({
+            Counter: endValue
+        }, {
+            duration: 2000, // Duración de la animación
+            easing: 'swing',
+            step: function(now) {
+                $(this).text(Math.ceil(now)); // Actualiza el texto
+            }
+        });
+    }
+
+    $(window).on('scroll', function() {
+        // Verifica si la sección está en la vista
+        const sectionTop = $('.container-fluid').offset().top;
+        const sectionBottom = sectionTop + $('.container-fluid').outerHeight();
+        const scrollTop = $(this).scrollTop();
+        const windowHeight = $(this).height();
+
+        if (!animated && scrollTop + windowHeight >= sectionTop && scrollTop < sectionBottom) {
+            animated = true; // Evita que se vuelva a animar
+            animateCounter('.counter-profesionales', 14);
+            animateCounter('.counter-clientes', 99);
+        }
+    });
+});
+</script>
+
+            <div class="container-fluid py-5">
+                <div class="container py-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 pb-5 pb-lg-0">
+                            <img class="img-fluid w-100" src="{% static 'img/fondo_estetica.jpg'%}" alt="Imagen">
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Sobre Nosotros</h6>
+                            <h1 class="mb-4"> Juliett Studio  Tu mejor elección</h1>
+                            <p class="pl-4 border-left border-primary"> Somos una estetica completa que ofrece servicios de calidad con los mejores profesionales para que estes siempre hermosa pensamos en cada detalle pensamos en vos!</p>
+                            <div class="row pt-3">
+                                <div class="col-6">
+                                    <div class="bg-light text-center p-4">
+                                        <h3 class="display-4 text-primary counter-profesionales">14</h3>
+                                        <h6 class="text-uppercase">Profesionales</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-light text-center p-4">
+                                        <h3 class="display-4 text-primary counter-clientes">99</h3>
+                                        <h6 class="text-uppercase">Clientes Felices</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+    <!--Fin de Prueva contador-->
     <!-- About End -->
 
     <!-- Carrusel de Productos -->
@@ -107,21 +172,21 @@
                         </div>
                         <div class="product-item">
                             <div class="img-container">
-                                <img src="{% static 'img/pestañas.jpeg' %}" alt="Pestañas">
+                                <img src="{% static 'img/Pestañas4.png' %}" alt="Pestañas">
                             </div>
                             <h5 class="font-weight-bold">Pestañas</h5>
                             <a href="#" class="btn btn-reservar">Reservar turno</a>
                         </div>
                         <div class="product-item">
                             <div class="img-container">
-                                <img src="{% static 'img/masaje.jpeg' %}" alt="Masajes">
+                                <img src="{% static 'img/Masajes-1.jpg' %}" alt="Masajes">
                             </div>
                             <h5 class="font-weight-bold">Masajes</h5>
                             <a href="#" class="btn btn-reservar">Reservar turno</a>
                         </div>
                         <div class="product-item">
                             <div class="img-container">
-                                <img src="{% static 'img/depi.jpeg' %}" alt="Depilación Laser">
+                                <img src="{% static 'img/depi3.jpeg' %}" alt="Depilación Laser">
                             </div>
                             <h5 class="font-weight-bold">Depilación</h5>
                             <a href="#" class="btn btn-reservar">Reservar turno</a>
@@ -145,7 +210,9 @@
             </div>
         </div>
     </div>
-    <!--Service End -->
+<a href="https://wa.me/1149716494?text=Hola,%20me%20gustaría%20obtener%20más%20información" target="_blank" class="btn-whatsapp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
@@ -184,7 +251,7 @@
                             <!--<i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
                             <div class="d-flex align-items-center mb-3">
                                 <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="">
-                                 <div class="ml-3">
+                                <div class="ml-3">
                                     <h6 class="text-uppercase">Client Name</h6>
                                     <span>Profession</span>
                                 </div>
@@ -207,9 +274,9 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> -->
 
-    <!-- Contact Javascript File 
+    <!-- Contact Javascript File
     <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script> -->    
+    <script src="mail/contact.js"></script>--> 
 {% endblock %}
 
 {% block scripts %}
