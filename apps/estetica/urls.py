@@ -6,5 +6,5 @@ urlpatterns = [
     path("", views.Inicio.as_view(), name="inicio"), # Clases
     path("contacto/", views.Contacto.as_view(), name="contacto"), # Clases
     path("galeria/", views.Galeria.as_view(), name="galeria"),
-    path("profesionales/", views.Profesionales.as_view(), name="profesionales"),
+     
 ]
