@@ -16,19 +16,21 @@ const startCarrusel = (e) => window.carruselPause = setInterval(rotate, 3000); /
 const stopCarrusel = (e) => clearInterval(window.carruselPause); // Funcion para parar la animacion
 
 carrusel.on({
-    // Pausa la animacion de giro
+    // Pausa la animacion de giro, cuando el mouse esta sobre la ruleta
     'mouseenter': stopCarrusel,
-    // Reanuda la funcion del giro
+    // Reanuda la funcion del giro, cuando el mouse sale de la ruleta
     'mouseleave': startCarrusel
 });
 
 // Comienza el efcto de giro al iniciar la pagina
 startCarrusel();
+//---------------------------------------- Carrusel 3D animacion de rotacion ---------------------------------
 
-const carousel = document.querySelector(".content-carrousel")
-let isDragging = false;
-const sensitivity = 5;
-let cal = 0;
+//---------------------------------------- Carrusel 3D animacion de arrastre ---------------------------------
+const carousel = document.querySelector(".content-carrousel")// Obtengo el elemento que contiene el carrusel
+let isDragging = false;//Bandera para indetificar si esta siendo arrastrado
+const sensitivity = 5;//Sensibilidad del arrastre, sirve para calcular el grado de giro de la ruleta
+let cal = 0;//Variable para calcular la posicion final
 
 const dragStart = (e) =>{
     isDragging = true;
@@ -37,12 +39,12 @@ const dragStart = (e) =>{
     function rotation(e){
         const currentX = e.pageX || e.touches[0].pageX;
         cal = (currentX - x)/sensitivity;
-        // Mejorar calculo, tiene la suma entre cal y currdeg, tiene que ser multiplo de 40
+        cal = Math.round(cal/40)*40; // Redondeo al multiplo mas cercano del 40
         carousel.style.transform = `rotateY(${cal+currdeg}deg)`
-        console.log((cal+currdeg));
     }
     function endDrag(){
         currdeg += cal;
+        
         carousel.removeEventListener("touchmove",rotation);
         carousel.removeEventListener("mousemove",rotation);
         window.removeEventListener("mouseup",endDrag);
@@ -58,10 +60,19 @@ const dragging = (e) =>{
     rotation(e);
     //console.log(e.pageX);
 };
-const dragStop = (e) =>{
+const dragStop = (e) =>{// Estado de desagarre
     isDragging = false;
     carousel.classList.remove("dragging");
 };
 carousel.addEventListener("mousedown",dragStart);
 carousel.addEventListener("touchstart",dragStart);
-//-----------------------------------------------------------------------------------------------------------
+//---------------------------------------- Carrusel 3D animacion de arrastre ---------------------------------
+
+let acc = document.getElementsByClassName("accordion"); // Obtiene cada uno de los elementos que tengan la clase
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){ // Le agrega el evento onclick
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+}
