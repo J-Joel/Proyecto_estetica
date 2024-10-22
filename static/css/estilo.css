@@ -2409,21 +2409,21 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #212529;
-  background-color: #62C3E7;
-  border-color: #62C3E7;
+  background-color: #ff2cc059;
+  border-color: #ff2cc059;
 }
 
 .btn-secondary:hover {
   color: #212529;
-  background-color: #41b6e2;
-  border-color: #36b2e0;
+  background-color: #ff2cc089;
+  border-color: #ff2cc089;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
   color: #212529;
-  background-color: #41b6e2;
-  border-color: #36b2e0;
-  box-shadow: 0 0 0 0.2rem rgba(88, 171, 203, 0.5);
+  background-color: #ff2cc089;
+  border-color: #ff2cc089;
+  box-shadow: 0 0 0 0.2rem rgba(237, 77, 171, 0.5);
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
