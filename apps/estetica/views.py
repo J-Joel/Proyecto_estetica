@@ -19,4 +19,3 @@ class Profesionales(TemplateView):
 
 class PreguntasFrecuentes(TemplateView):
     template_name = "inicio/preguntas_frecuentes.html"
-    
