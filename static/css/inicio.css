@@ -14,7 +14,7 @@
 }
 .owl-nav button {
     
-    background-color: rgb(248, 131, 151)247, 175, 187; /* Color de fondo rosa */
+    background-color:#F195B2; /* rgb(248, 131, 151)247, 175, 187; /* Color de fondo rosa */
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -32,7 +32,7 @@
 }
 .owl-nav button span {
     font-size: 1.5em;
-    color: rgb(243, 118, 151); /* Color de la flecha */
+    color: #F195B2; /*rgb(243, 118, 151); /* Color de la flecha */
 }
 /* Bot */
 .btn-whatsapp {
@@ -40,8 +40,8 @@
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #f67bc7;
-    color: rgb(207, 129, 173);
+    background-color: #F195B2;
+    color: #F195B2; /*rgb(207, 129, 173);*/
     padding: 7px;
     border-radius: 50%; 
     text-decoration: none;
@@ -52,8 +52,6 @@
     width: 40px; /* Ajusta el tamaño del ícono si quero modificar Talia */
     height: 40px;
 }
-
-
 
 .carousel-item h6 {
     color: inherit;  

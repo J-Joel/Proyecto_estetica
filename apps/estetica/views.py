@@ -14,5 +14,8 @@ class Contacto(TemplateView):
 class Galeria(TemplateView):
     template_name = 'inicio/galeria.html'
     
+class Profesionales(TemplateView):
+    template_name = 'inicio/profesionales.html'
 
-    
+class PreguntasFrecuentes(TemplateView):
+    template_name = "inicio/preguntas_frecuentes.html"

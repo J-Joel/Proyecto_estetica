@@ -1,5 +1,5 @@
 venv
 env
-beauty/
+beauty
 *__pycache__
 db.sqlite3
