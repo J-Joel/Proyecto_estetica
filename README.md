@@ -119,3 +119,21 @@ Para mantener el proyecto actualizado con los cambios realizados por otros integ
 ```
 
 Una caracteristica especial de github, es la de modificar los archivos indicando que parte se modifico, dejando ambas versiones comentadas en caso de un conflicto de cambios.
+
+### **Conflicto al actualizar**
+error: Your local changes to the following files would be overwritten by merge:
+  templates/base.html
+Please commit your changes or stash them before you merge.
+Aborting
+
+Este error ocurre al intentar actualizar tu repositorio local y justamente haz modificado archivos que fueron modificados por otro intregrante. Para poder actualizar el repositorio "sin borrar" tu progreso. Debes de ejecutar el comando stash
+```bash
+  $ git stash
+```
+Este comando hara que tu repositorio local elimine todas tus modificaciones hechas desde el ultimo pull, permitiendo asi, el comando pull.
+
+Ya actualizado el repositorio, deberas ejecutar el comando stash pop.
+```bash
+  $ git stash pop
+```
+Con este comando recuperaras todo tu progreso y se combinara con el repositorio actualizado.

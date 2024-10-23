@@ -1,0 +1,180 @@
+{% extends "../base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}"> <!-- CSS DE LOS SERVICIOS -->
+{% endblock %}
+
+{% block title%}
+    Servicios
+{% endblock %}
+
+{% block body %}
+    <div class="panel-central">
+        <!-- Titulo -->
+        <div class="container text-center py-5">
+            <h3 class="text-white display-3 mb-4">Servicios</h3>
+        </div>
+        <!-- Titulo Fin -->
+        <!-- Carrusel 3D -->
+        <div class="py-5 carrusel-body">
+            <div class="content-all">
+                <div class="content-carrousel">
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <figure>
+                            <img src="{% static 'img/una11.jpg' %}" draggable="false">
+                        </figure>
+                        <div>
+                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carrusel 3D Fin -->
+        <!-- Lista de servicios -->
+        
+        <!-- Lista de servicios Fin -->
+        <!-- Service Start Reserva de Turnos -->  
+        <div class="row justify-content-center bg-appointment mx-0">
+            <div class="col-lg-6 pb-5 mb-5 con-turno">
+                <div class="p-5 my-1"> 
+                    <h1 class="text-white text-center mb-4">Reserva Tu Turno</h1>
+                    <form>
+                        <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control bg-transparent p-4" placeholder="Nombre" required="required" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control bg-transparent p-4" placeholder="Email" required="required" />
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Seleccione una fecha" data-target="#date" data-toggle="datetimepicker"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="time" id="time" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Seleccione un horario" data-target="#time" data-toggle="datetimepicker"/>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <select class="custom-select bg-transparent px-4" style="height: 47px;"><!--DESPLEGABLE-->
+                                    <option selected>Seleccione un Servicio</option>
+                                    <option value="1">Semipermanente</option>
+                                    <option value="2">Kapping</option>
+                                    <option value="3">Esculpidas</option>
+                                    <option value="4">Pestañas</option>
+                                    <option value="5">Masajes</option>
+                                    <option value="6">Depilación</option>
+                                    <option value="7">Faciles</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Solicitar Turno</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center bg-appointment mx-0">
+            <div class="col-lg-6 py-1 mb-5 con-turno">
+                <div class="p-5 my-1">
+                    <h1>"Porque mereces lo mejor, asegúrate de tu turno hoy mismo"</h1>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- Service End -->
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/catalogoservicios.js' %}" type="text/javascript"></script>
+{% endblock %}

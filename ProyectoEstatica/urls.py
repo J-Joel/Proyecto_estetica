@@ -10,4 +10,5 @@ urlpatterns = [
     path('', include(urlsglobal.estetica), name='inicio'),  # Define la vista para la página de inicio
     path('login/', include(urlsglobal.usuarios), name='login'),  # Vista de login
     path('profesionales/', include(urlsglobal.profesionales), name='profesionales'),
+    path('servicios/', include(urlsglobal.servicios), name='servicios'),  # Vista de login
 ]

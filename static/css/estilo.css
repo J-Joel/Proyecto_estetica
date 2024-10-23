@@ -62,7 +62,7 @@ body {
   line-height: 1.5;
   color: #555555;
   text-align: left;
-  background-color: #F3F6FF;
+  background-color: #dc84b3;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -485,7 +485,7 @@ small,
 mark,
 .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: #e08ec9;
 }
 
 .list-unstyled {
@@ -6416,7 +6416,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #FFFFFF !important;
+  background-color: #ffb1f0 !important;    
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -6436,7 +6436,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #fff !important;  
 }
 
 .bg-transparent {
