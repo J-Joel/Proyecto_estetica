@@ -2,7 +2,7 @@
 /*GALERIA CSS*/
 
 body {
-	background-color: rgb(233, 114, 164) ;
+	background-color: rgb(247, 218, 230) ;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -47,7 +47,7 @@ body {
 	border-radius: 10px;
 	height: 400px; /*alto del contenedor*/
 	overflow: hidden;
-	background-color: rgb(247, 147, 228)45, 245;
+	background-color: rgb(246, 164, 231)45, 245;
 	transition: 0.4s ease-in-out;
 	box-shadow: 0 5px 12px rgba(0,0,0,0.5);
 	flex: 0.25;
