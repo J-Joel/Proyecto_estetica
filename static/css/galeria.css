@@ -4,6 +4,7 @@
 body {
 	background-color: rgb(247, 218, 230) ;
 	background-color: rgb(255, 255, 255) ;
+	background-color: rgb(234, 196, 212) ;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -71,13 +72,12 @@ body {
   .descripcion{
 	font-family: Georgia, 'Times New Roman', Times, serif;  
 	color: #F195B2;
-  }
-    
+  }    
   .subtitulo{
 	font-family: Georgia, 'Times New Roman', Times, serif; 
-	color: rgba(130, 126, 126, 0.573)
+	color: rgba(130, 126, 126, 0.573);
+	color: #d977c1;
   }
-  
   /* Estilos para pantallas más pequeñas */
 	/*@media (max-width: 600px) {
     .contenedor-imagen {
