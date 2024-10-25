@@ -1,7 +1,13 @@
 <!-- templates/inicio/preguntas_frecuentes.html -->
 {% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
+{% block style %}
+
+{% endblock %}
+{% block title %}{% endblock %}
+
+{% block body %}
 <div class="banner">
     <h1>Preguntas Frecuentes</h1>
     <p>Encuentra respuestas a las preguntas más comunes.</p>
@@ -18,4 +24,7 @@
         <p>Para cancelar un turno, ve a la sección de Mis Turnos y selecciona el turno que deseas cancelar.</p>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
 {% endblock %}
