@@ -54,14 +54,22 @@
             </a>
         </div>
     </div>
+
     <!-- Carousel End-->
     <!-- About Start-->
     <section  id="Nos">
+
+    </section>
+    <!-- Carousel End -->
+    <body>
+        
+    <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 pb-5 pb-lg-0">
                     <img class="img-fluid w-100" src="{% static 'img/fondo_estetica.jpg'%}" alt="Imagen">
+                    <img class="img-fluid w-100" src="img/about.jpg" alt="">
                 </div>
                 <div class="col-lg-6">
                     <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Sobre Nosotros</h6>
@@ -76,7 +84,7 @@
                         </div>
                         <div class="col-6">
                             <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary counter-clientes">99</h3>
+                                <h3 class="display-4 text-primary" data-toggle="counter-up">99</h3>
                                 <h6 class="text-uppercase">Clientes Felices</h6>
                             </div>
                         </div>
@@ -86,7 +94,6 @@
         </div>
     </div>
     <!-- About End -->
-
     <!-- Carrusel de Productos -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -171,6 +178,9 @@
                                 </div>
                             </div>
                             <p class="m-0">"La experiencia en la estética fue excelente. Todo muy profesional, desde la atención hasta los servicios brindados. Me encantó el ambiente y el resultado final superó mis expectativas. Sin duda, recomiendo este lugar a quienes buscan un servicio de calidad y cuidado en cada detalle."</p>
+                            <br>
+                        </div>
+                        <div>
                         </div>
                         <div class="position-relative">
                             <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
@@ -181,7 +191,7 @@
                                     <span>Profesión: Contadora</span>
                                 </div>
                             </div>
-                            <p class="m-0">"Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor".</p>
+                            <p class="m-0">¡Estoy encantada con mis uñas! El servicio fue excelente, la atención y el trato muy amables. ¡Lo recomiendo totalmente!</p>
                         </div>
                         <div class="position-relative">
                             <!--<i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
@@ -210,12 +220,14 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> -->
 
-    <!-- Contact Javascript File
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>--> 
+    
+        <!-- Topbar End -->
 {% endblock %}
 
 {% block scripts %}
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/carousel2d.js' %}" type="text/javascript"></script>
+    <!-- Contact Javascript File
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>  -->
 {% endblock %}
