@@ -128,48 +128,61 @@
     };
 }
 
-.div-accordion{
-    margin: auto 10px auto 10px;
-    border: 2px solid #4c003d35;
-}
-.div-accordion figure{
-    width: 100%;
-    height: 120px;
-    margin: auto;
+.div-accordion{ /* Contenedor de toda la lista */
+    margin: auto 50px auto 50px;
+    border: 5px solid #4c003d35;
+    border-radius: 20px;
     overflow: hidden;
-    display: flex;
 }
-.accordion {
-    background-color: transparent;
+
+.div-accordion h2{ /* Titulo de la lista */
+    margin: 10px
+}
+
+.accordion { /* Banner del servicio cargado */
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    /*padding: 18px;*/
     width: 100%;
+    height: 100%;
     border: none;
-    text-align: left;
+    position: relative;
+    text-align: center;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
 }
-
-.accordion.active, button.accordion:hover {
+.accordion img{ /* Propiedades de la imagen del servicio */
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    opacity: 0.7;
+}
+.accordion-text { /* Propiedades del nombre del servicio */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.accordion.active, .accordion:hover{ /* Cuando el banner sea activado o el raton este sobre el elemento */
     color: #eee;
     background-color: #96006b9d;
 }
 
-.accordion:after {
-    content: '\02795';
+.accordion:after { /* Creo que ya no es necesario */
     font-size: 13px;
     color: #777;
     float: right;
     margin-left: 5px;
 }
 
-.accordion.active:after {
-    content: "\2796";
+.accordion.active:after { /* Obviamente no es necesario xd */
 }
 
-div.panel {
+div.panel { /* Contenedor de la descripcion y botones del servicio */
     padding: 0 18px;
     background-color: white;
     max-height: 0;
@@ -177,8 +190,15 @@ div.panel {
     transition: 0.6s ease-in-out;
     opacity: 0;
 }
-
-div.panel.show {
+.panel-descripcion { /* Contenedor de la descripcion */
+    margin-top: 10px;
+}
+.btn-servicio{ /* Propiedades de los botones */
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+div.panel.show { /* Efecto al activarse el banner del servicio */
     opacity: 1;
     max-height: 500px;
 }
