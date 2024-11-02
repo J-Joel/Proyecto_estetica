@@ -13,7 +13,7 @@
     <div class="panel-central">
         <!-- Titulo -->
         <div class="container text-center py-5">
-            <h2 class="text-white display-3 mb-4">Servicios</h2>
+            <h2 class="text-primary display-3 mb-4">Servicios</h2>
         </div>
         <!-- Titulo Fin -->
         <div class="row justify-content-center bg-appointment mx-0">
@@ -48,7 +48,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                     <div class="carrusel-item">
@@ -56,7 +56,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                     <div class="carrusel-item">
@@ -64,7 +64,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                     <div class="carrusel-item">
@@ -72,7 +72,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                     <div class="carrusel-item">
@@ -80,7 +80,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                     <div class="carrusel-item">
@@ -88,7 +88,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                     <div class="carrusel-item">
@@ -96,7 +96,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                     <div class="carrusel-item">
@@ -104,7 +104,7 @@
                             <img src="{% static 'img/una11.jpg' %}" draggable="false">
                         </figure>
                         <div>
-                            <a href="#" class="btn btn-reservar" draggable="false">Mas detalle</a>
+                            <a href="#" class="btn btn-reservar" draggable="false">Más detalle</a>
                         </div>
                     </div>
                 </div>
@@ -136,54 +136,71 @@
         <div class="row justify-content-center bg-appointment mx-0">
             <div class="col-lg-6 pb-5 mb-5 con-serv">
                 <div class="p-5 my-1"> 
-                    <h1 class="text-white text-center mb-4">Reserva Tu Turno</h1>
-                    <form>
+                    <h1 class="text-primary text-center mb-4">Reservá Tu Turno</h1>
+                    <form class="">
                         <div class="form-row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control bg-transparent p-4" placeholder="Nombre" required="required" />
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="inputName"> Nombre</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <input type="email" class="form-control bg-transparent p-4" placeholder="Email" required="required" />
-                            </div>
-                        </div>
-                        </div>
-                        <div class="form-row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Seleccione una fecha" data-target="#date" data-toggle="datetimepicker"/>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="inputEmail"> Email</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Seleccione un horario" data-target="#time" data-toggle="datetimepicker"/>
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <label for="inputDate"> Seleccione un día</label>
+                                        <input type="date" class="form-control" id="inputDate" placeholder="Data gg/mm/aaaa">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <label for="inputTime"> Seleccione un horario</label>
+                                        <input type="time" class="form-control" id="inputTime" placeholder="Timetables">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
                         <div class="form-row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <select class="custom-select bg-transparent px-4" style="height: 47px;"><!--DESPLEGABLE-->
-                                    <option selected>Seleccione un Servicio</option>
-                                    <option value="1">Semipermanente</option>
-                                    <option value="2">Kapping</option>
-                                    <option value="3">Esculpidas</option>
-                                    <option value="4">Pestañas</option>
-                                    <option value="5">Masajes</option>
-                                    <option value="6">Depilación</option>
-                                    <option value="7">Faciles</option>
-                                </select>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <select class="form-control" style="height: 47px;"><!--DESPLEGABLE-->
+                                        <option selected>Seleccione un servicio</option>
+                                        <option value="1">Depilación</option>
+                                        <option value="2">Masajes</option>
+                                        <option value="3">Uñas</option>
+                                        <option value="4">Alisado</option>
+                                        <option value="5">Faciales</option>
+                                        <option value="6">Cejas</option>
+                                        <option value="6">Pestañas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <select class="form-control" style="height: 47px;"><!--DESPLEGABLE-->
+                                        <option selected>Seleccione un profesional</option>
+                                        <option value="1">Dani</option>
+                                        <option value="2">Nati</option>
+                                        <option value="3">Nicol</option>
+                                        <option value="4">Andre</option>
+                                        <option value="5">Flor</option>
+                                        <option value="6">Mica</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <button class="" type="submit" style="height: 47px;">Solicitar Turno</button>
-                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Solicitar Turno</button>
                         </div>
                     </form>
                 </div>
