@@ -7,34 +7,69 @@
 {% block title %}{% endblock %}
 
 {% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 <!-- Header Start -->
 <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px; background:  url({% static 'img/estudio8.jpg'%}) no-repeat center center; background-size: cover;">
     <div class="container text-center py-5">
         <h3 class="text-white display-3 mb-4">¿Cómo podemos ayudarte?</h3>
-    </div>
 </div>
-<!-- Header End -->
+</div>
+<!-- Header End 
 <div class="banner">
     <div class="banner" style="text-align: center;">
-    <!--<h1>¿Cómo podemos ayudarte?</h1>-->
-    <p>Estamos aquí para ayudarte a aprovechar al máximo nuestra aplicación.</p>
-</div>
-
-<div class="faq-list">
-    <div class="faq-item">
-        <h3>¿Está teniendo dificultades para programar un turno?</h3>
-        <p>Agregar Video</p>
-    </div>
-    <div class="faq-item">
-        <h3>¿Está experimentando dificultades al momento de registrarte?</h3>
-        <p> Agregar Video</p>
+    <p>Estamos aquí para ayudarte a aprovechar al máximo nuestra aplicación.</p>-->
+    <div class="marquee">
+        <strong>Necesitas Ayuda: Estamos aquí para ayudarte a aprovechar al máximo nuestra aplicación.</strong>
     </div>
 
-    <div class="faq-item">
-        <h3>¿No encontraste lo que buscabas?</h3>
-        <p> Para asistencia personalizada, no dudes en contactarnos por la redes. Estamos aquí para ayudarte!</p>
+    <style>
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 1.2em;
+            color: #333;
+            text-rendering: optimizeLegibility;
+        }
+        
+        .marquee strong {
+            display: inline-block;
+            padding-left: 50%; /* Mantén suficiente espacio para que el texto entre en la pantalla sin retraso */
+            animation: scroll-text 10s linear infinite; /* Reduce la duración para que sea más rápido */
+            will-change: transform;
+        }
+        
+        @keyframes scroll-text {
+            0% {
+                transform: translate3d(100%, 0, 0); /* Usa translate3d para mejor rendimiento */
+            }
+            100% {
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+        
+    </style>
+    
+    </style>
+    
+    <div class="faq-list">
+        <div class="faq-item">
+            <h3>¿Está teniendo dificultades para programar un turno?</h3>
+            <p>Agregar Video</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Está experimentando dificultades al momento de registrarte?</h3>
+            <p> Agregar Video</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿No encontraste lo que buscabas?</h3>
+            <p> Para asistencia personalizada, no dudes en contactarnos por la redes. Estamos aquí para ayudarte!</p>
+        </div>
     </div>
-</div>
 {% endblock %}
 
 {% block scripts %}
