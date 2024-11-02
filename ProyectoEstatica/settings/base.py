@@ -11,6 +11,7 @@ SECRET_KEY = 'django-insecure-w-v!f(wzimg)k0+s87q^kpe@93c(%tvad&b16ilrf&eohp+-7m
 
 # Application definition
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic', # Para servidor en la nube static
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -22,6 +23,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
