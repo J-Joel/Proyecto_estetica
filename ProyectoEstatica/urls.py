@@ -2,7 +2,7 @@
 # ProyectoEstatica/urls.py
 from django.contrib import admin
 from django.urls import path, include  # Asegúrate de importar desde django.urls
-from django.conf import settings # Cargo una variable?
+from .settings.local import STATIC_URL,STATIC_ROOT # Cargo una variable?
 from django.conf.urls.static import static # Cargo una clase?
 from path import urlsglobal
 
@@ -15,4 +15,4 @@ urlpatterns = [
     path('servicios/', include(urlsglobal.servicios), name='servicios'),  # Vista de login
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(STATIC_URL, document_root=STATIC_ROOT)
