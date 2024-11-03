@@ -11,6 +11,7 @@ SECRET_KEY = 'django-insecure-w-v!f(wzimg)k0+s87q^kpe@93c(%tvad&b16ilrf&eohp+-7m
 
 # Application definition
 INSTALLED_APPS = [
+    'jazzmin',
     'whitenoise.runserver_nostatic', # Para servidor en la nube static
     'django.contrib.admin',
     'django.contrib.auth',
@@ -21,6 +22,47 @@ INSTALLED_APPS = [
     'apps.estetica',
     'apps.servicios'
 ]
+# Jazmmin configuraciones
+JAZZMIN_SETTINGS = {
+    "site_logo" : "img/logo julliet.jpg",
+    "login_logo": "img/logo julliet.png",
+    "welcome_sign": "Julliet Studio", 
+    "show_ui_builder" : True,
+
+}
+
+JAZZMIN_UI_TWEAKS = {
+      "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": "navbar-pink",
+    "accent": "accent-navy",
+    "navbar": "navbar-gray-dark navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-maroon",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "minty",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-outline-primary",
+        "secondary": "btn-outline-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}
+LOGIN_REDIRECT_URL = '/admin/'  # Cambia esta línea para redirigir al panel de administración
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
