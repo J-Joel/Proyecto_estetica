@@ -11,8 +11,8 @@ SECRET_KEY = 'django-insecure-w-v!f(wzimg)k0+s87q^kpe@93c(%tvad&b16ilrf&eohp+-7m
 
 # Application definition
 INSTALLED_APPS = [
-    'jazzmin',
     'whitenoise.runserver_nostatic', # Para servidor en la nube static
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -32,7 +32,7 @@ JAZZMIN_SETTINGS = {
 }
 
 JAZZMIN_UI_TWEAKS = {
-      "navbar_small_text": False,
+    "navbar_small_text": False,
     "footer_small_text": False,
     "body_small_text": False,
     "brand_small_text": False,
