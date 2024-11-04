@@ -56,20 +56,71 @@
     </style>
     
     <div class="faq-list">
+        <!-- Pregunta 1 de Turno con el Boton-->
         <div class="faq-item">
             <h3>¿Está teniendo dificultades para programar un turno?</h3>
-            <p>Agregar Video</p>
-        </div>
-        <div class="faq-item">
-            <h3>¿Está experimentando dificultades al momento de registrarte?</h3>
-            <p> Agregar Video</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>¿No encontraste lo que buscabas?</h3>
-            <p> Para asistencia personalizada, no dudes en contactarnos por la redes. Estamos aquí para ayudarte!</p>
+            <p>Si estás teniendo problemas...</p>            
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modalTurno">
+                Ver más información
+            </button>
         </div>
     </div>
+        
+        <!-- Pregunta 2 registro con boton-->
+        <div class="faq-item">
+            <h3>¿Está experimentando dificultades al momento de registrarte?</h3>
+            <p>Si encuentras dificultades al registrarte, verifica que hayas completado todos los campos requerido..</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modalRegistro">
+                Ver más información
+            </button>
+        </div>
+        
+        <!-- Modal para programar turno -->
+        <div class="modal fade" id="modalTurno" tabindex="-1" role="dialog" aria-labelledby="modalTurnoLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTurnoLabel">Ayuda para programar un turno</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><!--Boton para cerrar la ventana T-->
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Asegúrate de completar todos los campos obligatorios, y verifica que el servicio esté disponible si el problema sigue comunicate con nuestro equipo.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mb-3" data-dismiss="modal">Regresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal para problemas de registro mas boton-->
+        <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalRegistroLabel">Ayuda para registrarte</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Asegúrate de que todos los campos estén llenos correctamente y que el correo no esté ya registrado.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mb-3" data-dismiss="modal">Regresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
 {% endblock %}
 
 {% block scripts %}
