@@ -26,7 +26,7 @@ INSTALLED_APPS = [
 JAZZMIN_SETTINGS = {
     "site_logo" : "img/logo_julliet.jpg",
     "login_logo": "img/logo_julliet.png",
-    "welcome_sign": "Julliet Studio", 
+    "welcome_sign": "Juliett Studio", 
     "show_ui_builder" : True,
 
 }
