@@ -143,89 +143,187 @@
         <!-- Lista de servicios Fin -->
         <section  id="Turno">
         </section>
-        <!-- Service Start Reserva de Turnos -->  
-        <div class="row justify-content-center bg-appointment mx-0">
-            <div class="col-lg-6 pb-5 mb-5 con-serv">
-                <div class="p-5 my-1"> 
-                    <h1 class="text-primary text-center mb-4">Reservá Tu Turno</h1>
-                    <form class="">
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="inputName"> </label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+        <!--Comienza Reserva de Turno por favor no tocar Talia -->  
+        <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Reserva de Turno</title>
+                    <!-- Bootstrap CSS -->
+                    <link rel="" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+                    <style>
+                        /* Estilo para el fondo de la página */
+                        body {
+                            background-color: #fdfdfd; /* Color rosa claro */
+                        }
+                
+                        /* Estilo personalizado para el contenedor del formulario lo mantiene mas chico t*/
+                        .form-container {
+                            max-width: 500px; 
+                            margin: 0 auto; /* Centrar el formulario en la página */
+                            padding: 20px; /* Espaciado interno */
+                            background-color: white; /* Fondo blanco para el formulario */
+                            border-radius: 10px; /* Bordes redondeados */
+                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+                        }
+                
+                        /* Estilo personalizado para botones rosa */
+                        .btn-rosa {
+                            background-color: #F195B2; 
+                            color: white; /* Color del texto */
+                            border: none; /* Sin borde */
+                            border-radius: 5px; /* Bordes redondeados */
+                            padding: 10px 15px; /* Espaciado interno */
+                            transition: background-color 0.3s; /* Transición del colorrr */
+                        }
+                
+                        .btn-rosa:hover {
+                            background-color: #ff85c2; /* al pasar el mouse se pone rosa creo que no me hace caso */
+                        }
+                    </style>
+                </head>
+                <body>
+                
+                <div class="container">
+                    <h1 class=" text-center mb-4">Reservá Tu Turno</h1>
+                    <div class="form-container"> <!-- contiene al formulario -->
+                        <form id="appointmentForm">
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputName">Ingresa tu Nombre</label>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Nombre" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="inputEmail"> </label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <label for="inputDate"> Seleccione un día</label>
-                                        <input type="date" class="form-control" id="inputDate" placeholder="Data gg/mm/aaaa">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputEmail">Ingresa tu Email</label>
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <label for="inputTime"> Seleccione un horario</label>
-                                        <input type="time" class="form-control" id="inputTime" placeholder="Timetables">
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputDate">Seleccione un día</label>
+                                        <input type="date" class="form-control" id="inputDate" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputTime">Seleccione un horario</label>
+                                        <input type="time" class="form-control" id="inputTime" required>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <select class="form-control" style="height: 47px;"><!--DESPLEGABLE-->
-                                        <option selected>Seleccione un servicio</option>
-                                        <option value="1">Depilación</option>
-                                        <option value="2">Masajes</option>
-                                        <option value="3">Uñas</option>
-                                        <option value="4">Alisado</option>
-                                        <option value="5">Faciales</option>
-                                        <option value="6">Cejas</option>
-                                        <option value="6">Pestañas</option>
-                                    </select>
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="serviceSelect">Seleccione un servicio</label><!--Los servicos listado T-->
+                                        <select id="serviceSelect" class="form-control" required>
+                                            <option value="" disabled selected>Seleccione un servicio</option>
+                                            <option value="Depilación">Depilación</option>
+                                            <option value="Masajes">Masajes</option>
+                                            <option value="Uñas">Uñas</option>
+                                            <option value="Alisado">Alisado</option>
+                                            <option value="Faciales">Faciales</option>
+                                            <option value="Cejas">Cejas</option>
+                                            <option value="Pestañas">Pestañas</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="professionalSelect">Seleccione un profesional</label><!--Listado Personal-->
+                                        <select id="professionalSelect" class="form-control" required>
+                                            <option value="" disabled selected>Seleccione un profesional</option>
+                                            <option value="Dani">Dani</option>
+                                            <option value="Nati">Nati</option>
+                                            <option value="Nicol">Nicol</option>
+                                            <option value="Andre">Andre</option>
+                                            <option value="Flor">Flor</option>
+                                            <option value="Mica">Mica</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <select class="form-control" style="height: 47px;"><!--DESPLEGABLE-->
-                                        <option selected>Seleccione un profesional</option>
-                                        <option value="1">Dani</option>
-                                        <option value="2">Nati</option>
-                                        <option value="3">Nicol</option>
-                                        <option value="4">Andre</option>
-                                        <option value="5">Flor</option>
-                                        <option value="6">Mica</option>
-                                    </select>
-                                </div>
+                            <div class="col">
+                                <button class="btn-rosa btn-block" type="submit">Solicitar Turno</button>
+                            </div>
+                        </form>
+                    </div>
+                
+                    <div class="row justify-content-center bg-appointment mx-0 mt-4">
+                        <div class="col-lg-6 py-1 mb-5 con-serv">
+                            <div class="p-5 my-1">
+                                <h3>"Porque mereces lo mejor, asegúrate de tu turno hoy mismo"</h3>
                             </div>
                         </div>
-                        <div class="col">
-                            <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Solicitar Turno</button>
+                    </div>
+                </div>
+                
+                <!-- Modal de Confirmación -->
+                <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="confirmationModalLabel">Confirmación de Reserva</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>¡Su turno fue reservado con éxito!</p>
+                                <p><strong>Nombre:</strong> <span id="confirmName"></span></p>
+                                <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+                                <p><strong>Fecha:</strong> <span id="confirmDate"></span></p>
+                                <p><strong>Hora:</strong> <span id="confirmTime"></span></p>
+                                <p><strong>Servicio:</strong> <span id="confirmService"></span></p>
+                                <p><strong>Profesional:</strong> <span id="confirmProfessional"></span></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="closeModalButton" class="btn-rosa">Regresar</button>
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row justify-content-center bg-appointment mx-0">
-            <div class="col-lg-6 py-1 mb-5 con-serv">
-                <div class="p-5 my-1">
-                    <h3>"Porque mereces lo mejor, asegúrate de tu turno hoy mismo"</h3>
-                </div>
-            </div>  
-        </div>
-    </div>
-    <!-- Service End -->
+                
+                <!-- jQuery y Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                
+                <script>
+                    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+                        // Evita el envío del formulario para que no se recargue la página
+                        event.preventDefault();
+                
+                        // Captura los valores de los campos del formulario los datos
+                        const name = document.getElementById('inputName').value;
+                        const email = document.getElementById('inputEmail').value;
+                        const date = document.getElementById('inputDate').value;
+                        const time = document.getElementById('inputTime').value;
+                        const service = document.getElementById('serviceSelect').value;
+                        const professional = document.getElementById('professionalSelect').value;
+                
+                        // Inserta los valores en el modal
+                        document.getElementById('confirmName').textContent = name;
+                        document.getElementById('confirmEmail').textContent = email;
+                        document.getElementById('confirmDate').textContent = date;
+                        document.getElementById('confirmTime').textContent = time;
+                        document.getElementById('confirmService').textContent = service;
+                        document.getElementById('confirmProfessional').textContent = professional;
+                
+                        // Muestra el modal de confirmación si esta oka 
+                        $('#confirmationModal').modal('show');
+                    });
+                
+                    // Cierra el modal cuando haces clik
+                    document.getElementById('closeModalButton').addEventListener('click', function() {
+                        $('#confirmationModal').modal('hide');
+                    });
+                </script>
+                </body>
+                </html>
+                
+
 {% endblock %}
 
 {% block scripts %}
