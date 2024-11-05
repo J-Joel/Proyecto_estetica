@@ -202,3 +202,33 @@ div.panel.show { /* Efecto al activarse el banner del servicio */
     opacity: 1;
     max-height: 500px;
 }
+ /* Estilo para el fondo de la página */
+ body {
+    background-color: #ffffff; /* Color rosa claro */
+}
+
+/* Estilo personalizado para el contenedor del formulario lo mantiene mas chico t*/
+.form-container {
+    max-width: 500px; 
+    margin: 0 auto; /* Centrar el formulario en la página */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgb(223, 219, 219); /* Fondo blanco para el formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo personalizado para botones rosa */
+.btn-rosa {
+    background-color: #F195B2; 
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición del colorrr */
+}
+
+.btn-rosa:hover {
+    background-color: #F195B2; /* al pasar el mouse se pone rosa creo que no me hace caso */
+}
