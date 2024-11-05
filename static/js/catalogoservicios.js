@@ -76,3 +76,33 @@ for (let i = 0; i < acc.length; i++) {
         this.nextElementSibling.classList.toggle("show");
     }
 }
+
+//------------Fomulario------------//
+document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+// Evita el envío del formulario para que no se recargue la página
+event.preventDefault();
+
+// Captura los valores de los campos del formulario los datos
+const name = document.getElementById('inputName').value;
+const email = document.getElementById('inputEmail').value;
+const date = document.getElementById('inputDate').value;
+const time = document.getElementById('inputTime').value;
+const service = document.getElementById('serviceSelect').value;
+const professional = document.getElementById('professionalSelect').value;
+
+// Inserta los valores en el modal
+document.getElementById('confirmName').textContent = name;
+document.getElementById('confirmEmail').textContent = email;
+document.getElementById('confirmDate').textContent = date;
+document.getElementById('confirmTime').textContent = time;
+document.getElementById('confirmService').textContent = service;
+document.getElementById('confirmProfessional').textContent = professional;
+
+//Muestra el modal de confirmación si esta oka 
+$('#confirmationModal').modal('show');
+});
+
+// Cierra el modal cuando cierra
+document.getElementById('closeModalButton').addEventListener('click', function() {
+$('#confirmationModal').modal('hide');
+});
