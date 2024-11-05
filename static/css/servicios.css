@@ -197,6 +197,7 @@ div.panel { /* Contenedor de la descripcion y botones del servicio */
     width: 200px;
     height: 50px;
     margin-bottom: 10px;
+    background-color: #F195B2;
 }
 div.panel.show { /* Efecto al activarse el banner del servicio */
     opacity: 1;
@@ -220,7 +221,7 @@ div.panel.show { /* Efecto al activarse el banner del servicio */
 }
 
 /* Estilo personalizado para botones rosa */
-.btn-rosa {
+.btn-rosa {    
     background-color: #F195B2; 
     color: white; /* Color del texto */
     border: none; /* Sin borde */
@@ -231,4 +232,5 @@ div.panel.show { /* Efecto al activarse el banner del servicio */
 
 .btn-rosa:hover {
     background-color: #F195B2; /* al pasar el mouse se pone rosa creo que no me hace caso */
+    color: #96006b9d;
 }
