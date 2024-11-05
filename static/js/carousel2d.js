@@ -69,8 +69,8 @@ $(document).ready(function() {
         const windowHeight = $(this).height();
         if (!animated && scrollTop + windowHeight >= sectionTop && scrollTop < sectionBottom) {
             animated = true; // Evita que se vuelva a animar
-            animateCounter('.counter-profesionales', 14);
-            animateCounter('.counter-clientes', 99);
+            animateCounter('.counter-profesionales', 6);
+            animateCounter('.counter-clientes', 100);
         }
     });
 });

@@ -4,7 +4,7 @@ import os
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app'] # Para servidor en la nube static
+ALLOWED_HOSTS = ['127.0.0.1','.vercel.app','localhost'] # Para servidor en la nube static
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

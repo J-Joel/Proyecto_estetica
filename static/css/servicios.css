@@ -18,7 +18,7 @@
     );*/
 }
 .panel-central{ /* Panel */
-    background: rgb(255, 254, 254);
+    /*background: rgb(255, 254, 254);*/
     font-family: Arial, Helvetica, sans-serif;
     width: 80%;
     margin: auto;
@@ -172,15 +172,15 @@
     background-color: #96006b9d;
 }
 
-.accordion:after { /* Creo que ya no es necesario */
+/*.accordion:after {  Creo que ya no es necesario 
     font-size: 13px;
     color: #777;
     float: right;
     margin-left: 5px;
-}
+}*/
 
-.accordion.active:after { /* Obviamente no es necesario xd */
-}
+/*.accordion.active:after {  Obviamente no es necesario xd 
+}*/
 
 div.panel { /* Contenedor de la descripcion y botones del servicio */
     padding: 0 18px;
