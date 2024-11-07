@@ -3,7 +3,13 @@ from .models import Empleado
 
 # Register your models here.
 class servAdmin (admin.ModelAdmin):
-    list_display= ()
-admin.site.register(Empleado)
+    list_display= (
+        'nombre',
+        'apellido',
+        'email',
+    )
+    
+    search_fields = ['nombre', 'apellido']
+admin.site.register(Empleado, servAdmin)
     
     
