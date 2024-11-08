@@ -23,6 +23,7 @@
                 </div>
             </div>  
         </div>
+        
         <!-- Carrusel 3D -->
         <div class="py-5 carrusel-body">
             <div class="content-all">
@@ -103,7 +104,8 @@
             </div>
         </div>
         <!-- Carrusel 3D Fin -->
-        <!-- Lista de servicios 
+
+        <!-- Lista de servicios  -->
         <div class="div-accordion mb-5">
             <h2>Estos son los servicios que te ofrecemos</h2>
             <div class="accordion">
@@ -141,124 +143,113 @@
             </div>
         </div>
         <!-- Lista de servicios Fin --> 
+
         <section  id="Turno">
         </section>
         <!--Comienza Reserva de Turno por favor no tocar Talia -->  
-        <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Reserva de Turno</title>
-                    <!-- Bootstrap CSS -->
-                    <link rel="" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-                    <body>
-                
-                <div class="container">
-                    <h1 class=" text-center mb-4">Reservá Tu Turno</h1>
-                    <div class="form-container"> <!-- contiene al formulario -->
-                        <form id="appointmentForm">
-                            <div class="form-row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="inputName">Ingresa tu Nombre</label>
-                                        <input type="text" class="form-control" id="inputName" placeholder="Nombre" required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="inputEmail">Ingresa tu Email</label>
-                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                                    </div>
-                                </div>
+        <div class="container">
+            <h1 class=" text-center mb-4">Reservá Tu Turno</h1>
+            <div class="form-container"> <!-- contiene al formulario -->
+                <form id="appointmentForm">
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputName">Ingresa tu Nombre</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Nombre" required>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="inputDate">Seleccione un día</label>
-                                        <input type="date" class="form-control" id="inputDate" required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="inputTime">Seleccione un horario</label>
-                                        <input type="time" class="form-control" id="inputTime" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="serviceSelect"><!--Seleccione un servicio--></label><!--Los servicos listado T-->
-                                        <select id="serviceSelect" class="form-control" required>
-                                            <option value="" disabled selected>Seleccione un servicio</option>
-                                            <option value="Depilación">Depilación</option>
-                                            <option value="Masajes">Masajes</option>
-                                            <option value="Uñas">Uñas</option>
-                                            <option value="Alisado">Alisado</option>
-                                            <option value="Faciales">Faciales</option>
-                                            <option value="Cejas">Cejas</option>
-                                            <option value="Pestañas">Pestañas</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="professionalSelect"><!--Seleccione un profesional--></label><!--Listado Personal-->
-                                        <select id="professionalSelect" class="form-control" required>
-                                            <option value="" disabled selected>Seleccione un profesional</option>
-                                            <option value="Dani">Dani</option>
-                                            <option value="Nati">Nati</option>
-                                            <option value="Nicol">Nicol</option>
-                                            <option value="Andre">Andre</option>
-                                            <option value="Flor">Flor</option>
-                                            <option value="Mica">Mica</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <button class="btn-rosa btn-block" type="submit">Solicitar Turno</button>
-                            </div>
-                        </form>
-                    </div>
-                
-                    <div class="row justify-content-center bg-appointment mx-0 mt-4">
-                        <div class="col-lg-6 py-1 mb-5 con-serv">
-                            <div class="p-5 my-1">
-                                <h3>"Porque mereces lo mejor, asegúrate de tu turno hoy mismo"</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputEmail">Ingresa tu Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Modal de Confirmación -->
-                <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="confirmationModalLabel">Confirmación de Reserva</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputDate">Seleccione un día</label>
+                                <input type="date" class="form-control" id="inputDate" required>
                             </div>
-                            <div class="modal-body">
-                                <p>¡Su turno fue reservado con éxito!</p>
-                                <p><strong>Nombre:</strong> <span id="confirmName"></span></p>
-                                <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
-                                <p><strong>Fecha:</strong> <span id="confirmDate"></span></p>
-                                <p><strong>Hora:</strong> <span id="confirmTime"></span></p>
-                                <p><strong>Servicio:</strong> <span id="confirmService"></span></p>
-                                <p><strong>Profesional:</strong> <span id="confirmProfessional"></span></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button id="closeModalButton" class="btn-rosa">Regresar</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputTime">Seleccione un horario</label>
+                                <input type="time" class="form-control" id="inputTime" required>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- jQuery y Bootstrap JS -->
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="serviceSelect"><!--Seleccione un servicio--></label><!--Los servicos listado T-->
+                                <select id="serviceSelect" class="form-control" required>
+                                    <option value="" disabled selected>Seleccione un servicio</option>
+                                    <option value="Depilación">Depilación</option>
+                                    <option value="Masajes">Masajes</option>
+                                    <option value="Uñas">Uñas</option>
+                                    <option value="Alisado">Alisado</option>
+                                    <option value="Faciales">Faciales</option>
+                                    <option value="Cejas">Cejas</option>
+                                    <option value="Pestañas">Pestañas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="professionalSelect"><!--Seleccione un profesional--></label><!--Listado Personal-->
+                                <select id="professionalSelect" class="form-control" required>
+                                    <option value="" disabled selected>Seleccione un profesional</option>
+                                    <option value="Dani">Dani</option>
+                                    <option value="Nati">Nati</option>
+                                    <option value="Nicol">Nicol</option>
+                                    <option value="Andre">Andre</option>
+                                    <option value="Flor">Flor</option>
+                                    <option value="Mica">Mica</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button class="btn-rosa btn-block" type="submit">Solicitar Turno</button>
+                    </div>
+                </form>
+            </div>
 
+            <div class="row justify-content-center bg-appointment mx-0 mt-4">
+                <div class="col-lg-6 py-1 mb-5 con-serv">
+                    <div class="p-5 my-1">
+                        <h3>"Porque mereces lo mejor, asegúrate de tu turno hoy mismo"</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal de Confirmación -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmationModalLabel">Confirmación de Reserva</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¡Su turno fue reservado con éxito!</p>
+                        <p><strong>Nombre:</strong> <span id="confirmName"></span></p>
+                        <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+                        <p><strong>Fecha:</strong> <span id="confirmDate"></span></p>
+                        <p><strong>Hora:</strong> <span id="confirmTime"></span></p>
+                        <p><strong>Servicio:</strong> <span id="confirmService"></span></p>
+                        <p><strong>Profesional:</strong> <span id="confirmProfessional"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="closeModalButton" class="btn-rosa">Regresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 {% endblock %}
 
 {% block scripts %}

@@ -1,54 +1,47 @@
-// Service and team carousel
-$(".service-carousel, .team-carousel").owlCarousel({
-    autoplay: false,
-    smartSpeed: 1500,
-    margin: 30,
-    dots: false,
-    loop: true,
-    nav : true,
-    navText : [
-        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-    ],
-    responsive: {
-        0:{
-            items:1
-        },
-        576:{
-            items:1
-        },
-        768:{
-            items:2
-        },
-        992:{
-            items:3
+(function ($) {
+    "use strict";
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
         }
-    }
-});
-$(document).ready(function(){
-    $('.product-carousel').owlCarousel({
-        loop: true,
-        margin: 8, /* Reducir el margen entre elementos */
-        nav: true, // Habilita las flechas de navegación
-        navText: ['<span>&#9664;</span>', '<span>&#9654;</span>'], // Personaliza las flechas
-        autoplay: true, // Desliza automáticamente
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+
+    $('#product-carousel').owlCarousel({
+        autoplay: false,
         autoplayHoverPause: true, // Pausa al pasar el ratón por encima
+        smartSpeed: 1500,
+        center: true,
+        margin: 8, /* Reducir el margen entre elementos */
+        dots: false,
+        loop: true, // Permitir bucle
+        nav: true, // Habilita las flechas de navegación
+        navText: [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ], // Personaliza las flechas
         responsive: {
-            0: {
-                items: 1
+            0:{
+                items:1
             },
-            900: {
-                items: 3
+            576:{
+                items:2
             },
-            1000: {
-                items: 5
+            768:{
+                items:3
+            },
+            992:{
+                items:4
             }
         }
     });
-});
-
-// Prueva contador
-$(document).ready(function() {
     let animated = false; // Variable para evitar animaciones múltiples
     function animateCounter(element, endValue) {
         $(element).prop('Counter', 0).animate({
@@ -73,4 +66,4 @@ $(document).ready(function() {
             animateCounter('.counter-clientes', 100);
         }
     });
-});
+})(jQuery);
