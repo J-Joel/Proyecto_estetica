@@ -32,6 +32,8 @@
                 <a class="text-white pr-3" href="{% url 'preguntas' %}">Preguntas frecuentes</a>
                 <span class="text-white">|</span>
                 <a class="text-white px-3" href="{% url 'ayuda' %}">Ayuda</a>
+                <span class="text-white">|</span>
+                <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a>
                 <!-- <span class="text-white">|</span>
                 <a class="text-white pl-3" href="">Soporte</a> -->
             </div>
@@ -39,8 +41,11 @@
             <!-- mover aqui el acceso al admin django -->
             {% else %}
             <div class="col text-right text-lg-right mb-2 mb-lg-0">
-                <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a>
+              <!--  <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a>-->
             </div>
+                <a href="{% url 'login' %}" class="text-white px-3">Ingresar</a>
+                <span class="text-white">|</span>
+                <a href="{% url 'login' %}?tab=registro" class="text-white px-3">Registrarse</a>
             {% endif %}
         </div>
         <div class="row align-items-start">
@@ -84,8 +89,8 @@
         </div>
     </nav>
     <!-- Navbar superior -->
-    <!-- Navbar inferior -->
-    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top-2">
+    <!-- Navbar inferior 
+    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top-2">-->
         <div class="collapse navbar-collapse justify-content-between" id="userCollapse">
             <div class="navbar-nav m-auto">
                 {% if usuario %}
@@ -94,8 +99,8 @@
                     <a href="#" class="nav-item nav-link navbar-text">Perfil</a>
                     <a href="#" class="nav-item nav-link navbar-text">Cerrar sesion</a>
                 {% else %}
-                    <a href="{% url 'login' %}" class="nav-item nav-link navbar-text">Ingresar</a>
-                    <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>
+                <!--    <a href="{% url 'login' %}" class="nav-item nav-link navbar-text">Ingresar</a>
+                    <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>-->
                 {% endif %}
             </div>
         </div>
