@@ -1,15 +1,10 @@
 {% extends "../base.html" %}
 {% load static %}
 {% block style %}
-    <!-- Libraries Stylesheet 
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
 
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <!-- <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" /> -->
-
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'lib/owlcarousel/assets/owl.theme.default.min.css'%}" rel="stylesheet" />
     <link href="{% static 'css/inicio.css'%}" rel="stylesheet" />
 {% endblock %}
 {% block title%}
@@ -58,38 +53,37 @@
 
     <!-- About Start-->
     <section id="Nos">
-        
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100" src="https://lh3.googleusercontent.com/d/1_B5grM0gEBpwnE-JDUdooUZYvF6DWckL" alt="Imagen">
-                </div>
-                <div class="col-lg-6">
-                    <h6 class="d-inline-block text-primary text-uppercase  py-1 px-2">Sobre Nosotros</h6>
-                    <h1 class="mb-4"> Juliett Studio  Tu mejor elección</h1>
-                    <p class="pl-4 border-left border-primary"> Somos una estética completa que ofrece servicios de calidad con los mejores profesionales para que estes siempre hermosa pensamos en cada detalle pensamos en vos!</p>
-                    <div class="row pt-3">
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary counter-profesionales">0</h3> <!-- Modificar la cantidad de profesionales en el js carousel2d -->
-                                <h6 class="text-uppercase">Profesionales</h6>
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pb-5 pb-lg-0">
+                        <img class="img-fluid w-100" src="https://lh3.googleusercontent.com/d/1_B5grM0gEBpwnE-JDUdooUZYvF6DWckL" alt="Imagen">
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="d-inline-block text-primary text-uppercase  py-1 px-2">Sobre Nosotros</h6>
+                        <h1 class="mb-4"> Juliett Studio  Tu mejor elección</h1>
+                        <p class="pl-4 border-left border-primary"> Somos una estética completa que ofrece servicios de calidad con los mejores profesionales para que estes siempre hermosa pensamos en cada detalle pensamos en vos!</p>
+                        <div class="row pt-3">
+                            <div class="col-6">
+                                <div class="bg-light text-center p-4">
+                                    <h3 class="display-4 text-primary counter-profesionales">6</h3> <!-- Modificar la cantidad de profesionales en el js carousel2d -->
+                                    <h6 class="text-uppercase">Profesionales</h6>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up">99</h3> <!-- El contador del script carousel2d no funciona para clientes -->
-                                <h6 class="text-uppercase">Clientes</h6>
+                            <div class="col-6">
+                                <div class="bg-light text-center p-4">
+                                    <h3 class="display-4 text-primary" data-toggle="counter-up">99</h3> <!-- El contador del script carousel2d no funciona para clientes -->
+                                    <h6 class="text-uppercase">Clientes</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
     </section>
+    <!-- About End -->
+    
 
     <!-- Carrusel de servicios 2D -->
     <div class="container-fluid py-5">
@@ -98,12 +92,13 @@
                 <div class="col-lg-6">
                     <h1 class="section-title position-relative mb-5">Seleccioná el servicio que querés realizarte</h1>
                 </div>
+                <div id="navhere" class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="owl-carousel product-carousel">
+                    <div id="product-carousel" class="owl-carousel">
                         <div class="product-item">
-                            <section id="Uñas">
+                            <section id="Uñas"></section>
                             <div class="img-container">
                                 <img src="https://lh3.googleusercontent.com/d/1iV0w11zXlUTMyxXYuuaQiFUKW0XVZMwb" alt="Uñas">
                             </div>
@@ -111,7 +106,7 @@
                             <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
                         </div>
                         <div class="product-item">
-                            <section id="pesta">
+                            <section id="pesta"></section>
                             <div class="img-container">
                                 <img src="https://lh3.googleusercontent.com/d/1SminTrIwWxvBvCWq8dbDWdE-4PACyDn2" alt="Pestañas">
                             </div>
@@ -119,7 +114,7 @@
                             <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
                         </div>
                         <div class="product-item">
-                            <section id="masa">
+                            <section id="masa"></section>
                             <div class="img-container">
                                 <img src="https://lh3.googleusercontent.com/d/1AiqUz9DTLGeM6FxYYFjEtUQ6n2QBnZPQ" alt="Masajes">
                             </div>
@@ -127,7 +122,7 @@
                             <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
                         </div>
                         <div class="product-item">
-                            <section id="depi">
+                            <section id="depi"></section>
                             <div class="img-container">
                                 <img src="https://lh3.googleusercontent.com/d/1U6NSAmMj_Sza8TDGOv3D2whVUIJMqNiK" alt="Depilación Laser">
                             </div>
@@ -135,7 +130,7 @@
                             <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
                         </div>
                         <div class="product-item">
-                            <section id="Faci">
+                            <section id="Faci"></section>
                             <div class="img-container">
                                 <img src="https://lh3.googleusercontent.com/d/1oADjWPfhiOJzSiB412iYOTcFPJudRLRb" alt="Tratamiento Facial">
                             </div>
@@ -143,7 +138,7 @@
                             <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
                         </div>
                         <div class="product-item">
-                            <section id="ceja">
+                            <section id="ceja"></section>
                             <div class="img-container">
                                 <img src="https://lh3.googleusercontent.com/d/1652w4-mLPrMJjPyXwyUsn0cMV5EAkVUa" alt="Tratamiento Facial">
                             </div>

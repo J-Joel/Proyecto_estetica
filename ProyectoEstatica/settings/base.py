@@ -20,7 +20,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.estetica',
-    'apps.servicios'
+    'apps.servicios',
+    'apps.usuarios', 
+    'apps.profesionales',
 ]
 # Jazmmin configuraciones
 JAZZMIN_SETTINGS = {

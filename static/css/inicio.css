@@ -13,7 +13,6 @@
     object-fit: cover;/*Para asegurar que la imgen se aguste al contenido*/
 }
 .owl-nav button {
-    
     background-color:  rgb(251, 147, 164)247, 175, 187; /* Color de fondo rosa */
     background-color:#F195B2; /* rgb(248, 131, 151)247, 175, 187; /* Color de fondo rosa */
     border: none;
@@ -62,5 +61,4 @@
 .carousel-item p {
     color: inherit; 
 };
-
 

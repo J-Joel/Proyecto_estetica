@@ -5,3 +5,4 @@ from.models import Servicio
 class servAdmin (admin.ModelAdmin):
     list_display= ()
 admin.site.register(Servicio)
+    

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 {% load static %}
@@ -29,71 +28,81 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-primary py-3 d-none d-md-block">
         <div class="row align-items-start">
-            <div class="col-md-4 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="col text-left text-lg-left mb-2 mb-lg-0">
                 <a class="text-white pr-3" href="{% url 'preguntas' %}">Preguntas frecuentes</a>
                 <span class="text-white">|</span>
                 <a class="text-white px-3" href="{% url 'ayuda' %}">Ayuda</a>
                 <!-- <span class="text-white">|</span>
                 <a class="text-white pl-3" href="">Soporte</a> -->
             </div>
-            <div class="col-md-4 offset-md-4 text-lg-right">
-                <!--<a class="text-white pr-3" href="{% url 'login' %}">Ingresar</a>-->
-                <a class="text-white pr-3" href="{% url 'admin:index' %}">Ingresar</a> 
-                
-                <span class="text-white">|</span>
-                <a class="text-white px-3" href="{% url 'login' %}?tab=registro">Registrarse</a>
+            {% if usuario.tipo == "Admin" or usuario.tipo == "Profesional" %}
+            <!-- mover aqui el acceso al admin django -->
+            {% else %}
+            <div class="col text-right text-lg-right mb-2 mb-lg-0">
+                <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a>
             </div>
-            <div class="col-md-4 text-center text-lg-left mb-2 mb-lg-0" style="margin-top: 10px;">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-3" href="https://www.facebook.com/100091799539532/videos/471098808994254/">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-3" href="" target="_blank"><i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-3" href=""><i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-3" href="https://www.instagram.com/juliett.studio/?hl=es">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-3" href="https://www.youtube.com/watch?v=Z6PhOvAgVhw">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+            {% endif %}
+        </div>
+        <div class="row align-items-start">
+        <div class="col-md-4 text-left text-lg-left mb-2 mb-lg-0" style="margin-top: 10px;">
+            <div class="d-inline-flex align-items-center">
+                <!--<a class="text-white px-3" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>-->
+                <a class="text-white px-3" href=""><i class="fab fa-twitter"></i></a>
+                <a class="text-white px-3" href="https://www.facebook.com/100091799539532/videos/471098808994254/"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white px-3" href="https://www.youtube.com/watch?v=Z6PhOvAgVhw"><i class="fab fa-youtube"></i></a>
+                <a class="text-white px-3" href="https://www.instagram.com/juliett.studio/?hl=es"><i class="fab fa-instagram"></i></a>
+            </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="{% url 'inicio' %}" class="navbar-brand d-block d-lg-none">
-                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Juliett Studio</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="{% url 'inicio' %}" class="nav-item nav-link navbar-text">Inicio</a>
-                        <a href="{% url 'inicio' %}#Nos" class="nav-item nav-link navbar-text">Nosotros</a>
-                        <a href="{% url 'profesionales' %}" class="nav-item nav-link navbar-text">Profesionales</a>
-                    </div>
-                    <a href="{% url 'inicio' %}" class="navbar-brand mx-4 d-none d-lg-block">
-                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Juliett Studio</h1>
-                    </a>
-                    <div class="navbar-nav mr-auto py-0">
-                        <a href="{% url 'servicios' %}" class="nav-item nav-link">Servicios</a>
-                        <a href="{% url 'galeria' %}" class="nav-item nav-link">Galería</a>
-                        <a href="{% url 'contacto' %}" class="nav-item nav-link">Contacto</a>
-                    </div>
-                </div>
-            </nav>
+    <!-- Navbar Principal -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top">
+        <a href="{% url 'inicio' %}" class="navbar-brand d-block d-lg-none">
+            <h1 class="m-0 display-4 text-primary">Juliett Studio</h1>
+        </a>
+        <div>
+        <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#userCollapse">
+            <i class="fas fa-user"></i>
+        </button>
+        <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#menuCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         </div>
-    </div>
-    <!-- Navbar End -->
+        <div class="collapse navbar-collapse justify-content-between" id="menuCollapse">
+            <div class="navbar-nav m-auto">
+                <a href="{% url 'inicio' %}" class="nav-item nav-link navbar-text">Inicio</a>
+                <a href="{% url 'inicio' %}#Nos" class="nav-item nav-link navbar-text">Nosotros</a>
+                <a href="{% url 'profesionales' %}" class="nav-item nav-link navbar-text">Profesionales</a>
+                <a href="{% url 'inicio' %}" class="navbar-brand mx-4 d-none d-lg-block">
+                    <h1 class="m-0 pt-2 text-primary">Juliett Studio</h1>
+                </a>
+                <a href="{% url 'servicios' %}" class="nav-item nav-link">Servicios</a>
+                <a href="{% url 'galeria' %}" class="nav-item nav-link">Galería</a>
+                <a href="{% url 'contacto' %}" class="nav-item nav-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar superior -->
+    <!-- Navbar inferior -->
+    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top-2">
+        <div class="collapse navbar-collapse justify-content-between" id="userCollapse">
+            <div class="navbar-nav m-auto">
+                {% if usuario %}
+                    <a href="#" class="nav-item nav-link navbar-text">Mis turnos</a>
+                    <a href="#" class="nav-item nav-link navbar-text">Mensajes</a>
+                    <a href="#" class="nav-item nav-link navbar-text">Perfil</a>
+                    <a href="#" class="nav-item nav-link navbar-text">Cerrar sesion</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="nav-item nav-link navbar-text">Ingresar</a>
+                    <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar inferior -->
     
-    <div class="div-body">
+    <div class="div-body bg-white">
     {% block body %}
     
     {% endblock %}

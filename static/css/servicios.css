@@ -203,10 +203,6 @@ div.panel.show { /* Efecto al activarse el banner del servicio */
     opacity: 1;
     max-height: 500px;
 }
- /* Estilo para el fondo de la página */
- body {
-    background-color: #ffffff; /* Color rosa claro */
-}
 
 /* Estilo personalizado para el contenedor del formulario lo mantiene mas chico t*/
 .form-container {
