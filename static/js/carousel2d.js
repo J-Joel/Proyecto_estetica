@@ -2,7 +2,7 @@
     "use strict";
 
     $('#product-carousel').owlCarousel({
-        autoplay: false,
+        autoplay: true,
         autoplayHoverPause: true, // Pausa al pasar el ratón por encima
         smartSpeed: 1500,
         center: true,

@@ -24,7 +24,7 @@
             </div>  
         </div>
         
-        <!-- Carrusel 3D -->
+        <!-- Carrusel 3D (estatica)-->
         <div class="py-5 carrusel-body">
             <div class="content-all">
                 <div class="content-carrousel">
@@ -105,42 +105,26 @@
         </div>
         <!-- Carrusel 3D Fin -->
 
-        <!-- Lista de servicios  -->
+        <!-- Lista de servicios (dinamica) -->
         <div class="div-accordion mb-5">
-            <h2>Estos son los servicios que te ofrecemos</h2>
-            <div class="accordion">
-                <img src="{% static 'img/una11.jpg' %}" alt="">
-                <div class="accordion-text"><h1>Nombre de servicio</h1></div>
-            </div>
-            <div class="panel">
-                <div class="panel-descripcion">
-                    <p>Descripcion y precio del servicio</p>
-                </div>
-                <a href="#" class="btn btn-primary btn-servicio">Ver mas</a>
-                <button class="btn btn-primary btn-servicio">Solicitar Turno</button>
-            </div>
-            <div class="accordion">
-                <img src="{% static 'img/una11.jpg' %}" alt="">
-                <div class="accordion-text"><h1>Nombre de servicio</h1></div>
-            </div>
-            <div class="panel">
-                <div class="panel-descripcion">
-                    <p>Descripcion y precio del servicio</p>
-                </div>
-                <a href="#" class="btn btn-primary btn-servicio">Ver mas</a>
-                <button class="btn btn-primary btn-servicio">Solicitar Turno</button>
-            </div>
-            <div class="accordion">
-                <img src="{% static 'img/una11.jpg' %}" alt="">
-                <div class="accordion-text"><h1>Nombre de servicio</h1></div>
-            </div>
-            <div class="panel">
-                <div class="panel-descripcion">
-                    <p>Descripcion y precio del servicio</p>
-                </div>
-                <a href="#" class="btn btn-primary btn-servicio">Ver mas</a>
-                <button class="btn btn-primary btn-servicio">Solicitar Turno</button>
-            </div>
+            {% if servicios %}
+                <h2>Estos son los servicios que te ofrecemos</h2>
+                {% for servicio in servicios %}
+                    <div class="accordion">
+                        <img src="{% static 'img/una11.jpg' %}" alt="">
+                        <div class="accordion-text"><h1>{{ servicio.nombre }}</h1></div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-descripcion">
+                            <p>{{ servicio.descripcion }}</p>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-servicio">Ver mas</a>
+                        <button id="{{servicio.id}}" class="btn btn-primary btn-servicio">Solicitar Turno</button>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h2>Los servicios no estan disponibles</h2>
+            {% endif %}
         </div>
         <!-- Lista de servicios Fin --> 
 
