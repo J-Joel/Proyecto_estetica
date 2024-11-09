@@ -36,5 +36,8 @@
     $('#menuCollapse').on('show.bs.collapse', function () {
         $('#userCollapse').collapse("hide");
     })
+    $( "#bt-menu" ).click(function() {
+        $('#userCollapse').show(); 
+    });
     /*********************************************/
 })(jQuery);

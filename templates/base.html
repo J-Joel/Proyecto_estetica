@@ -34,18 +34,17 @@
                 <a class="text-white px-3" href="{% url 'ayuda' %}">Ayuda</a>
                 <span class="text-white">|</span>
                 <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a>
-                <!-- <span class="text-white">|</span>
-                <a class="text-white pl-3" href="">Soporte</a> -->
+                <!--<a class="text-white pl-3" href="">Soporte</a> -->
             </div>
             {% if usuario.tipo == "Admin" or usuario.tipo == "Profesional" %}
             <!-- mover aqui el acceso al admin django -->
             {% else %}
             <div class="col text-right text-lg-right mb-2 mb-lg-0">
-              <!--  <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a>-->
-            </div>
+                <!--<a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a> -->
                 <a href="{% url 'login' %}" class="text-white px-3">Ingresar</a>
                 <span class="text-white">|</span>
-                <a href="{% url 'login' %}?tab=registro" class="text-white px-3">Registrarse</a>
+                <a href="{% url 'login' %}?tab=registro" class="text-white px-3">Registrarse</a> 
+            </div>
             {% endif %}
         </div>
         <div class="row align-items-start">
@@ -61,15 +60,16 @@
         </div>
     </div>
     <!-- Topbar End -->
+
     <!-- Navbar Principal -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top">
         <a href="{% url 'inicio' %}" class="navbar-brand d-block d-lg-none">
             <h1 class="m-0 display-4 text-primary">Juliett Studio</h1>
         </a>
-        <div>
+        <!--<div class="btmenu ml-auto">
         <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#userCollapse">
             <i class="fas fa-user"></i>
-        </button>
+        </button>-->
         <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#menuCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -89,23 +89,28 @@
         </div>
     </nav>
     <!-- Navbar superior -->
+
     <!-- Navbar inferior 
-    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top-2">-->
+    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top-2">
         <div class="collapse navbar-collapse justify-content-between" id="userCollapse">
-            <div class="navbar-nav m-auto">
+            <div class="navbar-nav m-auto" style="z-index: 9;" >
                 {% if usuario %}
                     <a href="#" class="nav-item nav-link navbar-text">Mis turnos</a>
                     <a href="#" class="nav-item nav-link navbar-text">Mensajes</a>
-                    <a href="#" class="nav-item nav-link navbar-text">Perfil</a>
+                    <a href="{% url 'perfil' %}" class="nav-item nav-link navbar-text">Perfil</a>
                     <a href="#" class="nav-item nav-link navbar-text">Cerrar sesion</a>
                 {% else %}
-                <!--    <a href="{% url 'login' %}" class="nav-item nav-link navbar-text">Ingresar</a>
-                    <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>-->
+                    <a href="{% url 'login' %}?tab=login" class="nav-item nav-link navbar-text">Ingresar</a>
+                    <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>
                 {% endif %}
             </div>
-        </div>
-    </nav>
-    <!-- Navbar inferior -->
+        </div> -->
+        <!-- Se supone que por aqui iria el boton
+        <div class="collapse navbar-collapse justify-content-between navbar-nav m-auto bt-menu">
+            <button class="btn btn-lg btn-primary" id="bt-menu"><i class="fa fa-angle-double-up"></i></button>
+        </div> -->
+    <!--</nav>
+    Navbar inferior -->
     
     <div class="div-body bg-white">
     {% block body %}
@@ -196,6 +201,7 @@
     <script src="{% static 'js/main.js' %}" type="text/javascript"></script> <!-- Ya no se estan nececitando de los servicios de estos js -->
 
     {% block scripts %}
+    
     {% endblock %}
 </body>
 

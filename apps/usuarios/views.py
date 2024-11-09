@@ -6,5 +6,7 @@ from django.shortcuts import render, redirect
 #def login(request):
 #    return render(request,'usuarios/login.html')
 class Login(TemplateView):
-    template_name = 'usuarios/login.html'
+    template_name = 'usuario/login.html'
     
+class Perfil(TemplateView):
+    pass
