@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 {% load static %}
@@ -57,60 +56,53 @@
         </div>
     </div>
     <!-- Topbar End -->
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="{% url 'inicio' %}" class="navbar-brand d-block d-lg-none">
-                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Juliett Studio</h1>
+    <!-- Navbar Principal -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top">
+        <a href="{% url 'inicio' %}" class="navbar-brand d-block d-lg-none">
+            <h1 class="m-0 display-4 text-primary">Juliett Studio</h1>
+        </a>
+        <div>
+        <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#userCollapse">
+            <i class="fas fa-user"></i>
+        </button>
+        <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#menuCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-between" id="menuCollapse">
+            <div class="navbar-nav m-auto">
+                <a href="{% url 'inicio' %}" class="nav-item nav-link navbar-text">Inicio</a>
+                <a href="{% url 'inicio' %}#Nos" class="nav-item nav-link navbar-text">Nosotros</a>
+                <a href="{% url 'profesionales' %}" class="nav-item nav-link navbar-text">Profesionales</a>
+                <a href="{% url 'inicio' %}" class="navbar-brand mx-4 d-none d-lg-block">
+                    <h1 class="m-0 pt-2 text-primary">Juliett Studio</h1>
                 </a>
-                <div>
-                <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#menuCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                </div>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav m-auto">
-                        <a href="{% url 'inicio' %}" class="nav-item nav-link navbar-text">Inicio</a>
-                        <a href="{% url 'inicio' %}#Nos" class="nav-item nav-link navbar-text">Nosotros</a>
-                        <a href="{% url 'profesionales' %}" class="nav-item nav-link navbar-text">Profesionales</a>
-                    <a href="{% url 'inicio' %}" class="navbar-brand mx-4 d-none d-lg-block">
-                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Juliett Studio</h1>
-                    </a>
-                        <a href="{% url 'servicios' %}" class="nav-item nav-link">Servicios</a>
-                        <a href="{% url 'galeria' %}" class="nav-item nav-link">Galería</a>
-                        <a href="{% url 'contacto' %}" class="nav-item nav-link">Contacto</a>
-                    </div>
-                </div>
-            </nav>
+                <a href="{% url 'servicios' %}" class="nav-item nav-link">Servicios</a>
+                <a href="{% url 'galeria' %}" class="nav-item nav-link">Galería</a>
+                <a href="{% url 'contacto' %}" class="nav-item nav-link">Contacto</a>
+            </div>
         </div>
-    </div>
+    </nav>
+    <!-- Navbar superior -->
     <!-- Navbar inferior -->
-    <div class="container-fluid position-relative">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <div class="collapse navbar-collapse justify-content-between" id="menuCollapse">
-                    <div class="navbar-nav m-auto">
-                        {% if usuario %}
-                            <a href="#" class="nav-item nav-link navbar-text">Mis turnos</a>
-                            <a href="#" class="nav-item nav-link navbar-text">Mensajes</a>
-                            <a href="#" class="nav-item nav-link navbar-text">Perfil</a>
-                            <a href="#" class="nav-item nav-link navbar-text">Cerrar sesion</a>
-                        {% else %}
-                            <a href="{% url 'login' %}" class="nav-item nav-link navbar-text">Ingresar</a>
-                            <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>
-                        {% endif %}
-                    </div>
-                </div>
-            </nav>
+    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top-2">
+        <div class="collapse navbar-collapse justify-content-between" id="userCollapse">
+            <div class="navbar-nav m-auto">
+                {% if usuario %}
+                    <a href="#" class="nav-item nav-link navbar-text">Mis turnos</a>
+                    <a href="#" class="nav-item nav-link navbar-text">Mensajes</a>
+                    <a href="#" class="nav-item nav-link navbar-text">Perfil</a>
+                    <a href="#" class="nav-item nav-link navbar-text">Cerrar sesion</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="nav-item nav-link navbar-text">Ingresar</a>
+                    <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>
+                {% endif %}
+            </div>
         </div>
-    </div>
-    <!-- Navbar End -->
+    </nav>
+    <!-- Navbar inferior -->
     
-    <div class="div-body">
+    <div class="div-body bg-white">
     {% block body %}
     
     {% endblock %}

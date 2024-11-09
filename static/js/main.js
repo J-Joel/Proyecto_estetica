@@ -28,4 +28,13 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
+
+    /* Script para que solo un menu este abierto */
+    $('#userCollapse').on('show.bs.collapse', function () {
+        $('#menuCollapse').collapse("hide");
+    })
+    $('#menuCollapse').on('show.bs.collapse', function () {
+        $('#userCollapse').collapse("hide");
+    })
+    /*********************************************/
 })(jQuery);
