@@ -32,18 +32,18 @@
                 <a class="text-white pr-3" href="{% url 'preguntas' %}">Preguntas frecuentes</a>
                 <span class="text-white">|</span>
                 <a class="text-white px-3" href="{% url 'ayuda' %}">Ayuda</a>
-                <span class="text-white">|</span>
+                <!--<span class="text-white">|</span>
                 <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a>
-                <!--<a class="text-white pl-3" href="">Soporte</a> -->
+                <a class="text-white pl-3" href="">Soporte</a> -->
             </div>
             {% if usuario.tipo == "Admin" or usuario.tipo == "Profesional" %}
             <!-- mover aqui el acceso al admin django -->
             {% else %}
             <div class="col text-right text-lg-right mb-2 mb-lg-0">
-                <!--<a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a> -->
-                <a href="{% url 'login' %}" class="text-white px-3">Ingresar</a>
+                <a class="text-white px-3" href="{% url 'admin:index' %}">Acceder al admin</a> 
+                <!--<a href="{% url 'login' %}" class="text-white px-3">Ingresar</a>
                 <span class="text-white">|</span>
-                <a href="{% url 'login' %}?tab=registro" class="text-white px-3">Registrarse</a> 
+                <a href="{% url 'login' %}?tab=registro" class="text-white px-3">Registrarse</a> -->
             </div>
             {% endif %}
         </div>
@@ -62,14 +62,14 @@
     <!-- Topbar End -->
 
     <!-- Navbar Principal -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0" style="z-index: 9;">
         <a href="{% url 'inicio' %}" class="navbar-brand d-block d-lg-none">
             <h1 class="m-0 display-4 text-primary">Juliett Studio</h1>
         </a>
-        <!--<div class="btmenu ml-auto">
+        <div class="btmenu ml-auto">
         <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#userCollapse">
             <i class="fas fa-user"></i>
-        </button>-->
+        </button>
         <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#menuCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -90,27 +90,27 @@
     </nav>
     <!-- Navbar superior -->
 
-    <!-- Navbar inferior 
-    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0 sticky-top-2">
+    <!-- Navbar inferior -->
+    <nav class="navbar navbar-inferior navbar-expand-lg bg-white navbar-light shadow p-lg-0" style="z-index: 9;">
         <div class="collapse navbar-collapse justify-content-between" id="userCollapse">
-            <div class="navbar-nav m-auto" style="z-index: 9;" >
+            <div class="navbar-nav m-auto"  >
                 {% if usuario %}
                     <a href="#" class="nav-item nav-link navbar-text">Mis turnos</a>
                     <a href="#" class="nav-item nav-link navbar-text">Mensajes</a>
                     <a href="{% url 'perfil' %}" class="nav-item nav-link navbar-text">Perfil</a>
-                    <a href="#" class="nav-item nav-link navbar-text">Cerrar sesion</a>
+                    <a href="{% url 'inicio' %}" class="nav-item nav-link navbar-text">Cerrar sesion</a>
                 {% else %}
                     <a href="{% url 'login' %}?tab=login" class="nav-item nav-link navbar-text">Ingresar</a>
                     <a href="{% url 'login' %}?tab=registro" class="nav-item nav-link navbar-text">Registrarse</a>
                 {% endif %}
             </div>
-        </div> -->
-        <!-- Se supone que por aqui iria el boton
+        </div>
+        <!-- Se supone que por aqui iria el boton 
         <div class="collapse navbar-collapse justify-content-between navbar-nav m-auto bt-menu">
             <button class="btn btn-lg btn-primary" id="bt-menu"><i class="fa fa-angle-double-up"></i></button>
         </div> -->
-    <!--</nav>
-    Navbar inferior -->
+    </nav>
+    <!-- Navbar inferior -->
     
     <div class="div-body bg-white">
     {% block body %}
@@ -162,7 +162,7 @@
                                 <a class="text-white-50" href="{% url 'inicio' %}#ceja"><i class="fa fa-angle-right mr-2"></i>Cejas</a>
                             </div>
                         </div>
-                        <div class="col-sm-12 mb-5">
+                        <!-- <div class="col-sm-12 mb-5">
                             <h5 class="text-white text-uppercase mb-4">Email</h5>
                             <div class="input-group w-100">
                                 <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
@@ -170,7 +170,7 @@
                                     <button class="btn btn-primary px-4">Sign Up</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
+                    <p class="m-0 text-white">&copy; <a href="{% url 'inicio'%}">Juliett-Studio.</a> Derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-right">
                     <!--p class="m-0 text-white">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>-->

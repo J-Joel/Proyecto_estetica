@@ -8,6 +8,7 @@ class Servicio(models.Model):
     descripcion = models.TextField('Descripción',max_length=5000)
     duracion = models.IntegerField('Duración (en horas)') # Duración en minutos o Horas
     precio = models.DecimalField(max_digits=10, decimal_places=2)
+    img = models.CharField('UrlImage', max_length=100, blank = False, default='#')
 
     def __str__(self):
         return self.nombre
