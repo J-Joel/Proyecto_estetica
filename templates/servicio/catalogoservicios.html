@@ -28,78 +28,20 @@
         <div class="py-5 carrusel-body">
             <div class="content-all">
                 <div class="content-carrousel">
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1iV0w11zXlUTMyxXYuuaQiFUKW0XVZMwb" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Mas detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1oADjWPfhiOJzSiB412iYOTcFPJudRLRb" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Mas detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/10ac1bUesxTF1y3G-7Ix_b7dyG7lvA7mu" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Más detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1UUmLb3fUqXUa0oHiXMqyDib27GBkSJmL" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Más detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1Hu-eTqfJxmDj_Q8jH0EwOYQCj87z8UoX" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Más detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1_fhx7pGs5cmxOa3-ly8l2xcHwz0QYhGJ" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Más detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1jnenQc4MOeNPhieCDYo8E6w6rize1ow6" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Más detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1D1Z-TmMZc8lPB4eIHtc8TURbQiU0Cd-_" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Más detalle</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <figure>
-                            <img src="https://lh3.googleusercontent.com/d/1Ep51QYJRCBT4pSBY1wCm65UOogNdGNyp" draggable="false">
-                        </figure>
-                        <div>
-                            <a href="#" class="btn btn-rosa" draggable="false">Más detalle</a>
-                        </div>
-                    </div>
+                    {% if servicios %} <!-- Se rompe si se agrega mas de 9 servicios -->
+                        {% for servicio in servicios %}
+                            <div class="carrusel-item">
+                                <figure>
+                                    <img src="https://lh3.googleusercontent.com/d/{{servicio.img}}" draggable="false">
+                                </figure>
+                                <div>
+                                    <a href="#{{servicio.nombre}}" class="btn btn-rosa" draggable="false">Mas detalle</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <h2>Los servicios no estan disponibles</h2>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -110,17 +52,19 @@
             {% if servicios %}
                 <h2>Estos son los servicios que te ofrecemos</h2>
                 {% for servicio in servicios %}
-                    <div class="accordion">
-                        <img src="{% static 'img/una11.jpg' %}" alt="">
-                        <div class="accordion-text"><h1>{{ servicio.nombre }}</h1></div>
-                    </div>
-                    <div class="panel">
-                        <div class="panel-descripcion">
-                            <p>{{ servicio.descripcion }}</p>
+                    <section id="{{servicio.nombre}}">
+                        <div class="accordion">
+                            <!-- <img src="https://lh3.googleusercontent.com/d/{{servicio.img}}" alt=""> -->
+                            <div class="accordion-text"><h1>{{ servicio.nombre }}</h1></div>
                         </div>
-                        <a href="#" class="btn btn-primary btn-servicio">Ver mas</a>
-                        <button id="{{servicio.id}}" class="btn btn-primary btn-servicio">Solicitar Turno</button>
-                    </div>
+                        <div class="panel">
+                            <div class="panel-descripcion">
+                                <p>{{ servicio.descripcion }}</p>
+                            </div>
+                            <!-- <a href="#" class="btn btn-primary btn-servicio">Ver mas</a> -->
+                            <a href="#Turno" id="{{servicio.id}}" class="btn btn-primary btn-servicio">Solicitar Turno</a>
+                        </div>
+                    </section>
                 {% endfor %}
             {% else %}
                 <h2>Los servicios no estan disponibles</h2>
@@ -128,8 +72,7 @@
         </div>
         <!-- Lista de servicios Fin --> 
 
-        <section  id="Turno">
-        </section>
+        <section id="Turno"></section>
         <!--Comienza Reserva de Turno por favor no tocar Talia -->  
         <div class="container">
             <h1 class=" text-center mb-4">Reservá Tu Turno</h1>

@@ -96,54 +96,21 @@
             <div class="row">
                 <div class="col-12">
                     <div id="product-carousel" class="owl-carousel">
-                        <div class="product-item">
-                            <section id="Uñas"></section>
-                            <div class="img-container">
-                                <img src="https://lh3.googleusercontent.com/d/1iV0w11zXlUTMyxXYuuaQiFUKW0XVZMwb" alt="Uñas">
-                            </div>
-                            <h5 class="font-weight-bold">Uñas</h5>
-                            <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
-                        </div>
-                        <div class="product-item">
-                            <section id="pesta"></section>
-                            <div class="img-container">
-                                <img src="https://lh3.googleusercontent.com/d/1SminTrIwWxvBvCWq8dbDWdE-4PACyDn2" alt="Pestañas">
-                            </div>
-                            <h5 class="font-weight-bold">Pestañas</h5>
-                            <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
-                        </div>
-                        <div class="product-item">
-                            <section id="masa"></section>
-                            <div class="img-container">
-                                <img src="https://lh3.googleusercontent.com/d/1AiqUz9DTLGeM6FxYYFjEtUQ6n2QBnZPQ" alt="Masajes">
-                            </div>
-                            <h5 class="font-weight-bold">Masajes</h5>
-                            <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
-                        </div>
-                        <div class="product-item">
-                            <section id="depi"></section>
-                            <div class="img-container">
-                                <img src="https://lh3.googleusercontent.com/d/1U6NSAmMj_Sza8TDGOv3D2whVUIJMqNiK" alt="Depilación Laser">
-                            </div>
-                            <h5 class="font-weight-bold">Depilación</h5>
-                            <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
-                        </div>
-                        <div class="product-item">
-                            <section id="Faci"></section>
-                            <div class="img-container">
-                                <img src="https://lh3.googleusercontent.com/d/1oADjWPfhiOJzSiB412iYOTcFPJudRLRb" alt="Tratamiento Facial">
-                            </div>
-                            <h5 class="font-weight-bold">Facial</h5>
-                            <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
-                        </div>
-                        <div class="product-item">
-                            <section id="ceja"></section>
-                            <div class="img-container">
-                                <img src="https://lh3.googleusercontent.com/d/1652w4-mLPrMJjPyXwyUsn0cMV5EAkVUa" alt="Tratamiento Facial">
-                            </div>
-                            <h5 class="font-weight-bold">Cejas</h5>
-                            <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
-                        </div>
+                        {% if servicios %}
+                            {% for servicio in servicios %}
+                                <section id="{{servicio.nombre}}">
+                                    <div class="product-item">
+                                        <figure class="img-container">
+                                            <img src="https://lh3.googleusercontent.com/d/{{servicio.img}}" alt="Uñas">
+                                        </figure>
+                                        <h5 class="font-weight-bold">{{ servicio.nombre }}</h5>
+                                        <a href="{% url 'servicios' %}#Turno" class="btn btn-reservar">Reservar turno</a>
+                                    </div>
+                                </section>
+                            {% endfor %}
+                        {% else %}
+                            <h2>Los servicios no estan disponibles</h2>
+                        {% endif %}
                     </div>
                 </div>
             </div>

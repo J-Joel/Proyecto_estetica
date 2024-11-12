@@ -19,7 +19,7 @@
 			<div class="login-form">
 				<div class="sign-in-htm">
 					<!--Cuadro de Ingresar ya estando reguistrado -->
-					<form action="#" method="POST"> 
+					<form action="{% url 'conectado' %}" method="POST"> 
                         {% csrf_token %}
                         <div class="group mb-2">
                             <label for="userlog" class="label">Usuario</label>
@@ -46,10 +46,10 @@
 				</div>
 				<!--Cuadro de Registrarse por primera ves: -->
 				<div class="sign-up-htm">
-					<form action="#" method="POST"> 
-            			{% csrf_token %}
-                	    <div class="group mb-2">
-                	    	<label for="userreg" class="label">Usuario</label>
+					<form action="{% url 'registro' %}" method="POST"> 
+						{% csrf_token %}
+						<div class="group mb-2">
+							<label for="userreg" class="label">Usuario</label>
 							<input type="text" id="userreg" name="txtuserreg" value="{{ usuario.usuario }}" class="form-control input" placeholder="Ingrese su usuario" maxlength="50" required>
 						</div>
 						<!--Tapa la contraseña con asteriscos-->
@@ -63,13 +63,13 @@
 						</div>
 						<div class="group mb-2">
 							<label for="emailreg" class="label">Correo electronico</label>
-                	        <input type="text" id="emailreg" name="txtemailreg" value="{{ usuario.email }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
-                	    </div>
-                	    <div class="group">
+							<input type="text" id="emailreg" name="txtemailreg" value="{{ usuario.email }}" class="form-control input" placeholder="Ingrese su contraseña" maxlength="50" required>
+						</div>
+						<div class="group">
 							<!--Le da diseño a boton de Sign up legra color input -->
-                	    	<button class="button" type="submit" style="text-align: center">Ingresar</button>
-                	    </div>
-            		</form>
+							<button class="button" type="submit" style="text-align: center">Ingresar</button>
+						</div>
+					</form>
 					<div class="hr"></div>
 					<div class="foot-lnk">
 						<label for="tab-1">Ya estas registrado?</a>
