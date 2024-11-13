@@ -26,11 +26,11 @@ INSTALLED_APPS = [
 ]
 # Jazmmin configuraciones
 JAZZMIN_SETTINGS = {
-    "site_logo" : "img/logo_julliet.jpg",
-    "site_brand": "Juliett Studio",
-    "login_logo": "img/logo_julliet.png",
-    "welcome_sign": "Juliett Studio", 
-    "show_ui_builder" : True,
+    "site_logo" : "img/logo_julliet.jpg", # logo dentro de admin 
+    "site_brand": "Juliett Studio", # nombre dentro de admin 
+    "login_logo": "img/logo_julliet.png", # logo de ingreso de ususario y contraseña
+    "welcome_sign": "Juliett Studio", # login admin
+    "show_ui_builder" : True, # cambiar theme
 
 }
 
