@@ -10026,7 +10026,7 @@ h6,
 }
 
 .product-item:hover {
-  background: #bb7ca3 !important;
+  background: rgba(255,86,142,0.3); /*#bb7ca3 !important;*/
 }
 
 .product-item:hover h5 {
