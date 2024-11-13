@@ -141,7 +141,7 @@
 }
 .accordion.active, .accordion:hover{ /* Cuando el banner sea activado o el raton este sobre el elemento */
     color: #eee;
-    background-color: #96006b9d;
+    background-color: #F195B2;
 }
 
 /*.accordion:after {  Creo que ya no es necesario 
